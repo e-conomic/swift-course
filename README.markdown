@@ -28,7 +28,7 @@ To ask questions please contact our iOS developer Anders at ahk@e-conomic.com. P
 Create a pull request to this repository where you have added you GitHub username to the list of applicants below.
 
 ## Applicants (GitHub username)
-@AndersHqst
+AndersHqst
 
 ---
 
