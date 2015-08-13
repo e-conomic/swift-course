@@ -13,7 +13,7 @@
 Interested in learning how to build apps for iOS using Swift?  Look no further. This fall e-conomic will host a weekly class, where you can come and learn together with full time developers, that want to learn as well. We will create a space in e-conomic's development department where you have the time to learn, and where you can get help and feedback, in a nice environment in central Copenhagen.
 
 ## What will we be doing? 
-We will watch and follow the curriculum of an online course from Stanford University, together with the official Swift book. It is therefore important that you can work independently and already have some basic programming background. We will try to cover a lot of material and also understand things in depth. So expect to spend at least one full day a week on this course. You will get weekly supervison, code review, and feedback from 2 professional developers, that will follow the course with you. To round off the course you will build a small iOS application, that could potentially be App Store ready. We will pitch some ideas for what you can build, but it is up to you. But the idea is to build an application that includes a substantial part of the material we have covered.
+We will watch and follow the curriculum of an online course from Stanford University, together with the official Swift book. It is therefore important that you can work independently and already have some basic programming background. We will try to cover a lot of material and also understand things in depth. So expect to spend at least one full day a week on this course. You will get weekly supervison, code review, and feedback from 2 professional developers, that will follow the course with you. To round off the course you will build a small iOS application, that could potentially be App Store ready. We will pitch some ideas for what you can build, but it is up to you. The goal is to build an application that includes a substantial part of the material we have covered.
 
 ## Ok, so how much is it?
 It's free. We have limited slots open, but the course is free of charge. While e-conomic will supply the location, coffee, and fresh fruit, you must bring your own hard- and software.
@@ -27,24 +27,25 @@ Direct any questions to our iOS developer Anders at ahk@e-conomic.com. Please wr
 ## Prerequisites
 This course will not cover the basics of programming and computer science. Before attending this course you must have some programming experience. There are, however, no expectations of you having any experience with iOS development, Swift, Objective-C, or mobile development in general.
 
-Furthermore, as you will be working together with other students, you must have some basic knowledge of working with revision control software. At e-conomic we use Git, and we strongly urge you to do so too. While we will gladly help you, but there will be no lessons on Git.
+Furthermore, as you will be working together with other students, you must have some basic knowledge of working with revision control software. At e-conomic we use Git, and we strongly urge you to do so too. While we will gladly help you, there will be no lessons on Git.
 
 ## Sign up
-Create a pull request to this repository where you have added you GitHub username to the list of applicants below.
+Create a pull request to this repository where you have added your GitHub username to the list of applicants below.
 
 ## Applicants (GitHub username)
 AndersHqst   
 sualitu   
 vladm123
+ssnielsen
 
 ---
 
 ## Studying at ITU?
-For ITU students, it may be possible to use this setup as a ECTS valid project. All you would have to do is to find a supervisor. See 'Project Description' below where we have sketched what your project description might look like.
+For ITU students, it may be possible to use this setup as an ECTS valid project. All you would have to do is to find a supervisor. See 'Project Description' below where we have sketched what your project description might look like.
 
 ## Project Description
 
-<i>For ITU students. The following is a draft for what a project description could look like in the ITU course base, as an independent ECTS approved project.</i>
+<i>For ITU students. The following is a draft for what a project description could look like in the ITU project base, as an independent ECTS approved project.</i>
 
 <b>Project titel (dansk):</b>   Udvikling af applikationer til iOS i Swift
 
