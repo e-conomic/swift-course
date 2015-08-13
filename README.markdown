@@ -10,25 +10,31 @@
 
 # Learn Swift for free at e-conomic A/S
 
-Interested in learning how to build apps for iOS using Swift?  Look no further. This fall e-conomic will host a weekly class in a nice environment, where you can come and learn together with full time developers, that want to learn as well. We will create a space in e-conomic's development department where you have the time to learn, and where you can get help and feedback.
+Interested in learning how to build apps for iOS using Swift?  Look no further. This fall e-conomic will host a weekly class, where you can come and learn together with full time developers, that want to learn as well. We will create a space in e-conomic's development department where you have the time to learn, and where you can get help and feedback, in a nice environment in central Copenhagen.
 
 ## What will we be doing? 
 We will watch and follow the curriculum of an online course from Stanford University, together with the official Swift book. It is therefore important that you can work independently and already have some basic programming background. We will try to cover a lot of material and also understand things in depth. So expect to spend at least one full day a week on this course. You will get weekly supervison, code review, and feedback from 2 professional developers, that will follow the course with you. To round off the course you will build a small iOS application, that could potentially be App Store ready. We will pitch some ideas for what you can build, but it is up to you. But the idea is to build an application that includes a substantial part of the material we have covered.
 
 ## Ok, so how much is it?
-It's free. We have limited slots open, but the course is free of charge. 
+It's free. We have limited slots open, but the course is free of charge. While e-conomic will supply the location, coffee, and fresh fruit, you must bring your own hard- and software.
 
 ## So what is the catch?
-No catch. We at e-conomic would like to get contact to new and future developers, and show you that e-conomic is a nice place to spend your working hours. But the aim of the course is for you to learn! No strings attached.
+There is no catch. We at e-conomic would like to get contact to new and future developers, and show you that e-conomic is a nice place to spend your working hours. We also will not dictate what kind of app you can and cannot build. The aim of this course is for you to learn! No strings attached.
 
 ## Practicalities
 Direct any questions to our iOS developer Anders at ahk@e-conomic.com. Please write what days and hours will work for you, but if possible the class will be Wednesdays from 9 AM starting the 26 of August 2015. Last course day will be no later than December 16. Depending of how fast we move, we may set more time aside for working on the final project.
+
+## Prerequisites
+This course will not cover the basics of programming and computer science. Before attending this course you must have some programming experience. There are, however, no expectations of you having any experience with iOS development, Swift, Objective-C, or mobile development in general.
+
+Furthermore, as you will be working together with other students, you must have some basic knowledge of working with revision control software. At e-conomic we use Git, and we strongly urge you to do so too. While we will gladly help you, there will be no lessons on Git.
 
 ## Sign up
 Create a pull request to this repository where you have added you GitHub username to the list of applicants below.
 
 ## Applicants (GitHub username)
 AndersHqst
+sualitu
 
 ---
 
