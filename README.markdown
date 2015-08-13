@@ -13,16 +13,16 @@
 Interested in learning how to build apps for iOS using Swift?  Look no further. This fall e-conomic will host a weekly class in a nice environment, where you can come and learn together with full time developers, that want to learn as well. We will create a space in e-conomic's development department where you have the time to learn, and where you can get help and feedback.
 
 ## What will we be doing? 
-We will watch and cover the curriculum of an online course from Stanford University, together with the official Swift book. Thus it is important that you can work independently and already have some basic programming background. We will try to cover a lot of material, and also understand things in depth, so expect to spend at least one full day a week. To round off the course we will build a small iOS application, that could potentially be App Store ready. We will pitch some ideas for what you can build, but it is up to you. But the idea is to build an application that includes a substantial part of the material we have covered.
+We will watch and follow the curriculum of an online course from Stanford University, together with the official Swift book. It is therefore important that you can work independently and already have some basic programming background. We will try to cover a lot of material and also understand things in depth. So expect to spend at least one full day a week on this course. You will get weekly supervison, code review, and feedback from 2 professional developers, that will follow the course with you. To round off the course you will build a small iOS application, that could potentially be App Store ready. We will pitch some ideas for what you can build, but it is up to you. But the idea is to build an application that includes a substantial part of the material we have covered.
 
 ## Ok, so how much is it?
 It's free. We have limited slots open, but the course is free of charge. 
 
 ## So what is the catch?
-No catch. We at e-conomic would like to get contact to new and future developers, and show you that e-conomic is a nice place to be and work. The aim of the course will be for you to learn!
+No catch. We at e-conomic would like to get contact to new and future developers, and show you that e-conomic is a nice place to spend your working hours. But the aim of the course is for you to learn! No strings attached.
 
-## Practical
-To ask questions please contact our iOS developer Anders at ahk@e-conomic.com. Please write what days will work for you, but if possible the class will be Wednesdays from 9 AM starting the 26 of August. Last course day will be no later than December 16. Depending of how fast we move, we may set more time aside for working on the final project.
+## Practicalities
+Direct any questions to our iOS developer Anders at ahk@e-conomic.com. Please write what days and hours will work for you, but if possible the class will be Wednesdays from 9 AM starting the 26 of August 2015. Last course day will be no later than December 16. Depending of how fast we move, we may set more time aside for working on the final project.
 
 ## Sign up
 Create a pull request to this repository where you have added you GitHub username to the list of applicants below.
@@ -33,7 +33,7 @@ AndersHqst
 ---
 
 ## Studying at ITU?
-For ITU students, it may be possible to use this setup as a ECTS valid project, and all you have to do is to find a supervisor. See 'Project Description' below where we have sketched what your project description might look like.
+For ITU students, it may be possible to use this setup as a ECTS valid project. All you would have to do is to find a supervisor. See 'Project Description' below where we have sketched what your project description might look like.
 
 ## Project Description
 
@@ -45,15 +45,15 @@ For ITU students, it may be possible to use this setup as a ECTS valid project, 
 
 <b>Problem statement:</b> Learn how to program applications for the iOS platform. This includes the iPhone, iPod Touch and the iPad. This is not possible through any other course currently offered at ITU.
 
-<b>Metode:</b> Follow the online course [Developing iOS 8 Apps with Swift](https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099) from Stanford University, and additional reading in Apple's Swift book. The course can be followed as a weekly session at e-conomic international at their office on Langebrogade in Copenhagen. This is done in collaboration with a full time iOS developer from e-conomic that will follow the course too and set aside some time for help and sparing. We will wrap up the course by developing a small iOS application that, as a minimum, incorporates the theory that has been presented in the Stanford course. Students will present their final projects in teams of 2 or 3.
+<b>Method:</b> Follow the online course [Developing iOS 8 Apps with Swift](https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099) from Stanford University, and additional reading in Apple's Swift book. The course can be followed as a weekly session at e-conomic international at their office on Langebrogade in Copenhagen. This is done in collaboration with a full time iOS developer from e-conomic that will follow the course too and set aside some time for help and sparring. We will wrap up the course by developing a small iOS application that, as a minimum, incorporates the theory that has been presented in the Stanford course. Students will present their final projects in teams of 2 or 3.
 
 <b>After the project the student must:</b>
 
 * be able to explain the Swift programming language and reflect upon differences and parallels to previously know programming languages e.g. Java or C#
-* be able to write MVC based software for iOS, and reflect upon common design patterns as solution to common challanges writing mobile applications.
+* be able to write MVC based software for iOS, and reflect upon common design patterns as solutions to common challenges with writing mobile applications.
 * be able to describe the most common features and workflows using the XCode or AppCode IDE.
 * understand the theory covered in the Swift book and online course, including, Foundation, extensions, views, view-controllers, universal applications, gesture recognizers, persistence, clojures, graphics, multithreading, optionals, and memory management all in the context of iOS.
 * show understanding of designing layouts for applications on mobile devices.
 * be able to write and execute unit- and simple UI-tests for iOS apps.
 
-To hand in: An iOS application that involves the fundamentel concepts covered in the Swift course. This should include, but is not limited to, integration with a web service, local persistance, and some use of custom graphics. A short technical paper (8-10 pages) discussing the implementation.
+To hand in: An iOS application that involves the fundamental concepts covered in the Swift course. This should include, but is not limited to, integration with a web service, local persistence, and some use of custom graphics. A short technical paper (8-10 pages) discussing the implementation.
