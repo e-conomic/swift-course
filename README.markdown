@@ -27,7 +27,7 @@ Direct any questions to our iOS developer Anders at ahk@e-conomic.com. Please wr
 ## Prerequisites
 This course will not cover the basics of programming and computer science. Before attending this course you must have some programming experience. There are, however, no expectations of you having any experience with iOS development, Swift, Objective-C, or mobile development in general.
 
-Furthermore, as you will be working together with other students, you must have some basic knowledge of working with revision control software. At e-conomic we use Git, and we strongly urge you to do so too. While we will gladly help you, there will be no lessons on Git.
+Furthermore, as you will be working together with other students, you must have some basic knowledge of working with revision control software. At e-conomic we use Git, and we strongly urge you to do so too. While we will gladly help you, but there will be no lessons on Git.
 
 ## Sign up
 Create a pull request to this repository where you have added you GitHub username to the list of applicants below.
