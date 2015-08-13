@@ -34,7 +34,7 @@ Create a pull request to this repository where you have added you GitHub usernam
 
 ## Applicants (GitHub username)
 AndersHqst   
-sualitu
+sualitu   
 vladm123
 
 ---
