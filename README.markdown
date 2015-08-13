@@ -19,7 +19,7 @@ We will watch and follow the curriculum of an online course from Stanford Univer
 It's free. We have limited slots open, but the course is free of charge. While e-conomic will supply the location, coffee, and fresh fruit, you must bring your own hard- and software.
 
 ## So what is the catch?
-There is no catch. We at e-conomic would like to get contact to new and future developers, and show you that e-conomic is a nice place to spend your working hours. We also will not dictate what kind of app you can and cannot build. The aim of this course is for you to learn! No strings attached.
+There is no catch. We at e-conomic would like to get contact to new and future developers, and show you that e-conomic is a nice place to spend your working hours. We will not dictate what kind of app you can and cannot build. The aim of this course is for you to learn! No strings attached.
 
 ## Practicalities
 Direct any questions to our iOS developer Anders at ahk@e-conomic.com. Please write what days and hours will work for you, but if possible the class will be Wednesdays from 9 AM starting the 26 of August 2015. Last course day will be no later than December 16. Depending of how fast we move, we may set more time aside for working on the final project.
