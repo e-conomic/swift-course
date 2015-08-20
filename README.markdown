@@ -22,7 +22,7 @@ It's free. We have limited slots open, but the course is free of charge. While e
 There is no catch. We at e-conomic would like to get contact to new and future developers, and show you that e-conomic is a nice place to spend your working hours. We will not dictate what kind of app you can and cannot build. The aim of this course is for you to learn! No strings attached.
 
 ## Practicalities
-Direct any questions to our iOS developer Anders at ahk@e-conomic.com. Please write what days and hours will work for you, but if possible the class will be Wednesdays from 9 AM starting the 26 of August 2015. Last course day will be no later than December 16. Depending of how fast we move, we may set more time aside for working on the final project.
+Direct any questions to our iOS developer Anders at ahk@e-conomic.com. The class will be Tuesdays from 12 o'clock starting the 1 of Spetember 2015. Last course day will be no later than December 16. Depending of how fast we move, we may set more time aside for working on the final project.
 
 ## Prerequisites
 This course will not cover the basics of programming and computer science. Before attending this course you must have some programming experience. There are, however, no expectations of you having any experience with iOS development, Swift, Objective-C, or mobile development in general.
