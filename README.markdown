@@ -43,6 +43,7 @@ olejessien
 kvkunkel (not available on Wednesdays at 9 either)   
 petergreve   
 adrianbrink
+oPolo (available all wednesdays except the one on the 9th of September)
 
 ---
 
