@@ -41,9 +41,9 @@ voldemorten
 lrusnac (but depends on the time, not available on wednesdays at 9)   
 olejessien   
 kvkunkel (not available on Wednesdays at 9 either)   
-petergreve
-soerendalby
-adrianbrink  
+petergreve   
+soerendalby   
+adrianbrink   
 oPolo (available all wednesdays except the one on the 9th of September)
 
 ---
