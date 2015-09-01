@@ -3,7 +3,8 @@
 <img src="http://www.petco.com/assets/shop/img_left_guineapig.jpg" alt="Guinea pig">
 </p>
 
-## e-conomic Swift course fall 2015 (The guinea pigs)
+## The guinea pigs 
+Overview of the e-conomic Swift course fall 2015 
 
 ### Tuesday 1. September
 * [Today's agenda](https://dl.dropboxusercontent.com/u/9021554/Swift%20course/Intro/intro.html)
