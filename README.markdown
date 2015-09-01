@@ -1,3 +1,6 @@
+# Registration for 2015 is closed. We have a full team and will not consider more candidates. We hope to run another curse during the spring 2016.
+
+
 <!-- ![Swift logo]() -->
 <p align="center">
 <img width="100" height="100" src="http://eclipsesource.com/blogs/wp-content/uploads/2014/06/Apple_Swift_Logo.png" alt="swift logo">
@@ -44,7 +47,9 @@ kvkunkel (not available on Wednesdays at 9 either)
 petergreve   
 soerendalby   
 adrianbrink   
-oPolo (available all wednesdays except the one on the 9th of September)
+oPolo (available all wednesdays except the one on the 9th of September)   
+mhartvig   
+nativix
 
 ---
 
