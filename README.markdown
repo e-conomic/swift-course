@@ -1,4 +1,4 @@
-# Registration for 2015 is closed. We have a full team and will not consider more candidates. We hope to run another curse during the spring 2016.
+# Registration for 2015 is closed. We have a full team and will not consider more candidates. We hope to run another course during the spring 2016.
 
 
 <!-- ![Swift logo]() -->
