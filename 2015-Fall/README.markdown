@@ -10,5 +10,5 @@
 * [Watch Lecture 1](https://itunes.apple.com/dk/course/developing-ios-8-apps-swift/id961180099)
 * Check out the [Swift book](https://itun.es/dk/jEUH0.l)
 * XCode setup and GitHub access to e-conomic/swift-course
-* Make sure you understand git clone|pull|push|branch|merge|status and github pull-request
+* Make sure you understand git add|checkout|clone|pull|push|branch|merge|status and github pull-request
 
