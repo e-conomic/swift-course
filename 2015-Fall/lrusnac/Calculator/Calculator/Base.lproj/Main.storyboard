@@ -180,7 +180,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addPoind" destination="BYZ-38-t0r" eventType="touchUpInside" id="lTL-Dm-eU5"/>
+                                    <action selector="addPoint" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVj-V1-8DG"/>
                                 </connections>
                             </button>
                         </subviews>
