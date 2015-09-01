@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         if lastOperation != nil {
             evaluate()
         } else {
-            lastValue = NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+            lastValue = (display.text! as NSString).doubleValue
         }
         
         userIsInTheMiddleOfTypingANumber = false
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func addPoind() {
+    @IBAction func addPoint() {
         if !userIsInTheMiddleOfTypingANumber {
             userIsInTheMiddleOfTypingANumber = true
             display.text = "0."
@@ -61,7 +61,8 @@ class ViewController: UIViewController {
     }
     
     func evaluate() {
-        let displayValue = NSNumberFormatter().numberFromString(display.text!)!.doubleValue //found on the internet, must be a better way
+        let displayValue = (display.text! as NSString).doubleValue
+        
         switch lastOperation! { //I am sure that last operation will be set
         case "-":
             lastValue -= displayValue
