@@ -6,9 +6,9 @@
 ## Overview of the e-conomic Swift course fall 2015
 
 ## Contact
-Sune sal@e-conomic.com 61301114   
-Søren ssn@e-conomic.com 26551981   
-Anders ahk@e-conomic.com 30290060   
+Sune sal@e-conomic.com 61301114 @sualitu
+Søren ssn@e-conomic.com 26551981 @ssnielsen
+Anders ahk@e-conomic.com 30290060 @AndersHqst
 
 ### Tuesday 1. September
 * [Today's agenda](https://dl.dropboxusercontent.com/u/9021554/Swift%20course/Intro/intro.html)
