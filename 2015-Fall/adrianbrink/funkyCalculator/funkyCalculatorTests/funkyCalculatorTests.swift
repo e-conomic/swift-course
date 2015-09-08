@@ -1,15 +1,15 @@
 //
-//  CalculatorTests.swift
-//  CalculatorTests
+//  funkyCalculatorTests.swift
+//  funkyCalculatorTests
 //
-//  Created by aevitas on 01/09/15.
+//  Created by aevitas on 08/09/15.
 //  Copyright (c) 2015 aevitas. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class CalculatorTests: XCTestCase {
+class funkyCalculatorTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

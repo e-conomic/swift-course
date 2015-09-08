@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Calculator
+//  nonFunkyCalculator
 //
-//  Created by aevitas on 01/09/15.
+//  Created by aevitas on 08/09/15.
 //  Copyright (c) 2015 aevitas. All rights reserved.
 //
 
