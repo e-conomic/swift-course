@@ -13,56 +13,65 @@ class CalculatorBrian {
     
     private enum Ops: Printable {
         case value(Double)
-        case UnaryOperation(Symbol, Double -> Double)
-        case BinaryOperation(Symbol, (Double, Double) -> Double)
+        case MathConst(String, Double)
+        case UnaryOperation(String, Double -> Double)
+        case BinaryOperation(String, (Double, Double) -> Double)
         
         var description: String {
             get {
                 switch self {
                 case .value(let value):
-                        return "\(value)"
+                    return "\(value)"
                 case .UnaryOperation(let symbol, _):
-                        return "\(symbol)"
+                    return "\(symbol)"
                 case .BinaryOperation(let symbol, _):
-                        return "\(symbol)"
+                    return "\(symbol)"
+                case .MathConst(let symbol, _):
+                    return "\(symbol)"
                 }
             }
         }
     }
-    
-    enum Symbol: Character {
-        case Addition = "+"
-        case Minus = "−"
-        case Multiplication = "×"
-        case Divition = "÷"
-        case Sqrt = "√"
-    }
-    
     private var opStack = [Ops]()
     
-    private var knownOps = [Symbol:Ops]()
+    private var knownOps = [String:Ops]()
     
     init() {
-        knownOps[Symbol.Addition] = Ops.BinaryOperation(Symbol.Addition, +)
-        knownOps[Symbol.Minus] = Ops.BinaryOperation(Symbol.Minus, -)
-        knownOps[Symbol.Multiplication] = Ops.BinaryOperation(Symbol.Multiplication, *)
-        knownOps[Symbol.Divition] = Ops.BinaryOperation(Symbol.Divition, /)
-        knownOps[Symbol.Sqrt] = Ops.UnaryOperation(Symbol.Sqrt, sqrt)
+        func learn(op: Ops) {
+            knownOps[op.description] = op
+        }
+    
+        learn(Ops.BinaryOperation("+", +))
+        learn(Ops.BinaryOperation("−") {$1 - $0})
+        learn(Ops.BinaryOperation("×", *))
+        learn(Ops.BinaryOperation("÷") {$1 / $0})
+        learn(Ops.UnaryOperation("√", sqrt))
+        learn(Ops.MathConst("π", M_PI ))
     }
     
     func pushValue(value: Double) {
         opStack.append(Ops.value(value))
     }
     
-    func performOperation(symbol: Symbol) {
-        if let operation = knownOps[symbol] {
+    func performOperation(action: String) -> Double? {
+        if let operation = knownOps[action] {
             opStack.append(operation);
         }
+        return evaluate()
+    }
+    
+    func history() -> String {
+        return "\(opStack)"
     }
     
     func evaluate() -> Double? {
-        let eva = evaluate(opStack)
-        return eva.Result
+        let (result, reminder) = evaluate(opStack)
+        println("\(opStack) = \(result) with \(reminder)")
+        return result
+    }
+    
+    func clear() {
+        opStack = [Ops]()
     }
     
     private func evaluate(ops: [Ops]) -> (Result: Double?, ReminderOps: [Ops]) {
@@ -74,22 +83,22 @@ class CalculatorBrian {
             switch op {
             case .value(let value):
                 return (value, reminderOps)
+            case .MathConst(_,let value):
+                return (value, reminderOps)
             case .UnaryOperation(_, let operation):
                 let evaluatedOp = evaluate(reminderOps)
                 if let res = evaluatedOp.Result {
                     return (operation(res), evaluatedOp.ReminderOps)
                 }
             case .BinaryOperation(_, let operation):
-                let eva1 = evaluate(reminderOps)
-                if let value1 = eva1.Result {
-                    let eva2 = evaluate(eva1.ReminderOps)
-                    if let value2 = eva2.Result {
-                        return (operation(value1,value2), eva2.ReminderOps)
+                let leftEvaluation = evaluate(reminderOps)
+                if let leftResult = leftEvaluation.Result {
+                    let rightEvaluation = evaluate(leftEvaluation.ReminderOps)
+                    if let rightResult = rightEvaluation.Result {
+                        return (operation(leftResult,rightResult), rightEvaluation.ReminderOps)
                     }
-                    
                 }
             }
-            
         }
         return (nil, ops)
     }
