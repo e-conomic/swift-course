@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     
     var userIsTyping: Bool = false
-    var lastAction: Bool?
+    var lastAction: Bool = false
     var lastValue = 0
     var newValue = 0
     
