@@ -10,6 +10,14 @@ Sune sal@e-conomic.com 61301114 @sualitu
 Søren ssn@e-conomic.com 26551981 @ssnielsen  
 Anders ahk@e-conomic.com 30290060 @AndersHqst   
 
+### Tuesday 8. September
+* [Watch Lecture 2](https://itunes.apple.com/us/course/2.-more-xcode-and-swift-mvc/id961180099?i=333886879&mt=2
+)
+* [Watch Lecture 3](https://itunes.apple.com/us/course/3.-applying-mvc/id961180099?i=334243996&mt=2
+)
+* Work on [Programming: Project  1](https://itunes.apple.com/us/course/programming-project-1/id961180099?i=334226280&mt=2) and hand in before next Tuesday.
+* We move to the newly released Xcode 7 and Swift 2.0. [What's new in Swift 2.0](https://www.hackingwithswift.com/swift2) 
+
 ### Tuesday 1. September
 * [Today's agenda](https://dl.dropboxusercontent.com/u/9021554/Swift%20course/Intro/intro.html)
 * [Watch Lecture 1](https://itunes.apple.com/dk/course/developing-ios-8-apps-swift/id961180099)
