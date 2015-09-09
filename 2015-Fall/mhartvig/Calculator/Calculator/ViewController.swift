@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var historyLabel: UILabel!
     
-    var isUserTyping: Bool = false;
-    var isNumberADecimal: Bool = false;
+    var isUserTyping = false
+    var isNumberADecimal = false
     
     let brain = CalculatorBrian()
     
@@ -38,6 +38,7 @@ class ViewController: UIViewController {
             } else {
                 display.text = "ERROR"
             }
+            historyLabel.text = brain.history()
         }
     }
     @IBAction func operate(sender: UIButton) {
@@ -47,7 +48,6 @@ class ViewController: UIViewController {
         
         if let operation = sender.currentTitle {
             displayValue = brain.performOperation(operation)
-            historyLabel.text = brain.history()
         }
         
     }
@@ -60,27 +60,28 @@ class ViewController: UIViewController {
             brain.pushValue(v)
         }
         displayValue = 0
-        historyLabel.text = brain.history()
     }
     
     
     
     @IBAction func numberPress(sender: UIButton) {
-        let number = sender.titleLabel!.text!;
-        
-        if (isUserTyping) {
-            display.text = display.text! + number;
-        } else {
-            display.text = number;
-            isUserTyping = true;
+        if let label = sender.titleLabel {
+            if let number = label.text {
+                if (isUserTyping) {
+                    display.text = display.text! + number;
+                } else {
+                    display.text = number;
+                    isUserTyping = true;
+                }
+            }
         }
     }
-    @IBAction func Clear(sender: AnyObject) {
-        historyLabel.text = ""
+    
+    @IBAction func Clear() {
+        brain.clear()
         displayValue = 0
         isUserTyping = false
         isNumberADecimal = false;
-        brain.clear()
     }
     
     @IBAction func dotPress() {
