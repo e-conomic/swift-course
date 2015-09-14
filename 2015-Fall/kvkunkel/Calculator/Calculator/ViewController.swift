@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController
 {
+    
     @IBOutlet weak var display: UILabel!
-
+    
     var typingNumber: Bool = false
     
+    var brain = CalculatorBrain()
     
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
@@ -28,6 +30,38 @@ class ViewController: UIViewController
         
         println("digit = \(digit)")
         
+    }
+    
+    @IBAction func operate(sender: UIButton) {
+        if typingNumber {
+            enter()
+        }
+        if let operation = sender.currentTitle {
+            if let result = brain.performOperation(operation) {
+                displayValue = result
+            } else {
+                displayValue = 0
+            }
+        }
+        
+    }
+    
+    var operandStack = Array<Double>()
+    
+    @IBAction func enter() {
+        typingNumber = false
+        if let result = brain.pushOperand(displayValue) {
+            displayValue = result
+        }
+    }
+    
+    var displayValue: Double {
+        get {
+            return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+        }
+        set {
+            display.text = "\(newValue)"
+        }
     }
 
 }
