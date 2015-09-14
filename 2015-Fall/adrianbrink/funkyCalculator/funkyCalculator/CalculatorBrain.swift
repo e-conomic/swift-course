@@ -12,8 +12,8 @@ class CalculatorBrain {
     
     private enum Op: Printable {
         case Operand(Double)
-        case UnaryOperation(String, Double -> Double)   // (The symbol, the function with one argument of Double)
-        case BinaryOperation(String, (Double, Double) -> Double)    // The symbol, the function with two arguments
+        case UnaryOperation(String, Double -> Double)
+        case BinaryOperation(String, (Double, Double) -> Double)
         
         var description: String {
             get {
@@ -29,11 +29,10 @@ class CalculatorBrain {
         }
     }
     
-    private var opStack = [Op]()    // = Array<Op>()
+    private var opStack = [Op]()
+    private var knownOps = [String:Op]()
     
-    private var knownOps = [String:Op]()    // = Dictionary<String, Op>()
-    
-    init() {    // called by 'let brain = CalculatorBrain()', looks for matching arguments. So init() is called by CalculatorBrain()
+    init() {
         func learnOp(op: Op) {
             knownOps[op.description] = op
         }
@@ -42,12 +41,6 @@ class CalculatorBrain {
         learnOp(Op.BinaryOperation("+", +))
         learnOp(Op.BinaryOperation("−") { $1 - $0 })
         learnOp(Op.UnaryOperation("√", sqrt))
-        
-//        knownOps["×"] = Op.BinaryOperation("×", *)  // { $0 * $1 }
-//        knownOps["÷"] = Op.BinaryOperation("÷") { $1 / $0 }
-//        knownOps["+"] = Op.BinaryOperation("+", +)  // { $0 + $1 }
-//        knownOps["−"] = Op.BinaryOperation("−") { $1 - $0 }
-//        knownOps["√"] = Op.UnaryOperation("√", sqrt)    // { sqrt($0) }
     }
     
     private func evaluate(ops: [Op]) -> (result: Double?, remainingOps:[Op]) {
@@ -55,9 +48,9 @@ class CalculatorBrain {
             var remainingOps = ops
             let op = remainingOps.removeLast()
             switch op {
-            case .Operand(let operand):     // CalculatorBrain.Op.Operand() In the brackets I will tell what to do with the value of it is actually an Operand. let operand is a local variable only for this case
+            case .Operand(let operand):
                 return (operand, remainingOps)
-            case .UnaryOperation(_, let operation): // Ignores the value that was replaced by _
+            case .UnaryOperation(_, let operation):
                 let operandEvaluation = evaluate(remainingOps)
                 if let operand = operandEvaluation.result {
                     return (operation(operand), operandEvaluation.remainingOps)
@@ -76,7 +69,7 @@ class CalculatorBrain {
     }
     
     func evaluate() -> Double? {
-        let (result, remainder) = evaluate(opStack) // result and remainder refer to result and remainingOps in the private evaluate // let (result, _) = evaluate(opStack)
+        let (result, remainder) = evaluate(opStack) 
         println("\(opStack) = \(result) with \(remainder) left over")
         return result
     }
