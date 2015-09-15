@@ -67,8 +67,8 @@ class CalculatorBrain {
                         return (operation(operand1, operand2), op2Evaluation.remainingOps)
                     }
                 }
-            case .MathConstant(let constant):
-                return (M_PI, remainingOps)
+            case .MathConstant(_, let constant):
+                return (constant, remainingOps)
             }
         }
         return (nil, ops)
