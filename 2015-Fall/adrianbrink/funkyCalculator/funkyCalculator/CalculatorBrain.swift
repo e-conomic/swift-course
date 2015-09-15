@@ -14,6 +14,7 @@ class CalculatorBrain {
         case Operand(Double)
         case UnaryOperation(String, Double -> Double)   // (The symbol, the function with one argument of Double)
         case BinaryOperation(String, (Double, Double) -> Double)    // The symbol, the function with two arguments
+        case ConstantOperation(String, Double)
         
         var description: String {
             get {
@@ -24,12 +25,16 @@ class CalculatorBrain {
                     return symbol
                 case .BinaryOperation(let symbol, _):
                     return symbol
+                case .ConstantOperation(let symbol, _):
+                    return symbol
                 }
             }
         }
     }
     
     private var opStack = [Op]()    // = Array<Op>()
+    
+    private var opHistory = [Op]()
     
     private var knownOps = [String:Op]()    // = Dictionary<String, Op>()
     
@@ -42,7 +47,11 @@ class CalculatorBrain {
         learnOp(Op.BinaryOperation("+", +))
         learnOp(Op.BinaryOperation("−") { $1 - $0 })
         learnOp(Op.UnaryOperation("√", sqrt))
-        
+        learnOp(Op.UnaryOperation("sin", sin)) //{ sin($0) })
+        learnOp(Op.UnaryOperation("cos", cos)) //{ cos($0) })
+        learnOp(Op.ConstantOperation("PI", M_PI))
+
+  
 //        knownOps["×"] = Op.BinaryOperation("×", *)  // { $0 * $1 }
 //        knownOps["÷"] = Op.BinaryOperation("÷") { $1 / $0 }
 //        knownOps["+"] = Op.BinaryOperation("+", +)  // { $0 + $1 }
@@ -70,6 +79,8 @@ class CalculatorBrain {
                         return (operation(operand1, operand2), op2Evaluation.remainingOps)
                     }
                 }
+            case .ConstantOperation(_, let value):
+                return (value, remainingOps)
             }
         }
         return (nil, ops)
@@ -83,13 +94,27 @@ class CalculatorBrain {
     
     func pushOperand(operand: Double) -> Double? {
         opStack.append(Op.Operand(operand))
+        opHistory.append(Op.Operand(operand))
         return evaluate()
     }
     
     func performOperation(symbol: String) -> Double? {
         if let operation = knownOps[symbol] {
             opStack.append(operation)
+            opHistory.append(operation)
         }
         return evaluate()
+    }
+    
+    func clear() {
+        opStack.removeAll()
+        opHistory.removeAll()
+    }
+    
+    func history() -> String {
+        var historyList = opHistory.map { "\($0)" }
+        var abc = " ".join(historyList)
+        return abc
+        // println(historyList)
     }
 }

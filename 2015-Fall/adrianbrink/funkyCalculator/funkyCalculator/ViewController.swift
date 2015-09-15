@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
     
+    @IBOutlet weak var history: UILabel!
+    
     var userIsTyping = false
     
     var brain = CalculatorBrain()
@@ -20,7 +22,12 @@ class ViewController: UIViewController {
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
         if userIsTyping {
-            display.text = display.text! + digit
+            if  digit == "." && display.text!.rangeOfString(".") != nil {
+               return
+            }
+            else {
+                display.text = display.text! + digit
+            }
         }
         else {
             display.text = digit
@@ -37,6 +44,7 @@ class ViewController: UIViewController {
         if let operation = sender.currentTitle {
             if let result = brain.performOperation(operation) {
                 displayValue = result
+                history.text = brain.history()
             } else {
                 displayValue = 0
             }
@@ -47,11 +55,18 @@ class ViewController: UIViewController {
         userIsTyping = false
         if let result = brain.pushOperand(displayValue) {
             displayValue = result
+            history.text = brain.history()
         } else {
             displayValue = 0
         }
     }
     
+    @IBAction func clear() {
+        displayValue = 0
+        history.text = ""
+        brain.clear()
+    }
+
     var displayValue: Double {
         get {
             return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
@@ -62,4 +77,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
