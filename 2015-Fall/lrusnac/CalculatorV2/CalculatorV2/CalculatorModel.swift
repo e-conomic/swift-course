@@ -56,13 +56,11 @@ class CalculatorModel {
     
     func pushNumber(number: Double) {
         ops.append(Op.Operand(number))
-        evaluate()
     }
     
     func pushOpNotNumber(keyString: String) {
         if let con = knownOps[keyString] {
             ops.append(con)
-            evaluate()
         }
     }
     

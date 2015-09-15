@@ -55,11 +55,16 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func enter() {
-        //push number and evaluate the stack
-        if let val = displayValue {
-            calculatorModel.pushNumber(val)
-            userIsInTheMiddleOfTypingANumber = false
-            pointWasInsertedInThisNumber = false
+        if userIsInTheMiddleOfTypingANumber {
+            //push number and evaluate the stack
+            if let val = displayValue {
+                calculatorModel.pushNumber(val)
+                if let res = calculatorModel.evaluate() {
+                    displayValue = res
+                }
+                userIsInTheMiddleOfTypingANumber = false
+                pointWasInsertedInThisNumber = false
+            }
         }
     }
     
@@ -76,24 +81,29 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func addOperator(sender: UIButton) {
-        if userIsInTheMiddleOfTypingANumber {
-            enter()
-        }
+        enter()
         if let op = sender.currentTitle {
             calculatorModel.pushOpNotNumber(op)
             userIsInTheMiddleOfTypingANumber = false
             pointWasInsertedInThisNumber = false
+        }
+        
+        if let res = calculatorModel.evaluate() {
+            displayValue = res
         }
     }
     
     @IBAction func addConstant(sender: UIButton) {
-        if userIsInTheMiddleOfTypingANumber {
-            enter()
-        }
+        enter()
+        
         if let op = sender.currentTitle {
             calculatorModel.pushOpNotNumber(op)
             userIsInTheMiddleOfTypingANumber = false
             pointWasInsertedInThisNumber = false
+        }
+        
+        if let res = calculatorModel.evaluate() {
+            displayValue = res
         }
     }
     
@@ -103,7 +113,7 @@ class CalculatorViewController: UIViewController {
             return (display.text! as NSString).doubleValue
         }
         set {
-            display.text = "\(newValue)"
+            display.text = "\(newValue!)"
         }
     }
 }
