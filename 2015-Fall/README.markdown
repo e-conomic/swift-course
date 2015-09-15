@@ -14,9 +14,9 @@ Anders ahk@e-conomic.com 30290060 @AndersHqst
 ### Tuesday 15. September
 * [Watch Lecture 4](https://itunes.apple.com/us/course/4.-more-swift-foundation-frameworks/id961180099?i=334467560&mt=2
 )
+* Try to finish [Programming: Project  1](https://itunes.apple.com/us/course/programming-project-1/id961180099?i=334226280&mt=2) - please help each other
 * [Watch Lecture 5 from home](https://itunes.apple.com/us/course/5.-objective-c-compatibility/id961180099?i=334823811&mt=2
 )
-* Hand in [Programming: Project  1](https://itunes.apple.com/us/course/programming-project-1/id961180099?i=334226280&mt=2) 
 
 ### Tuesday 8. September
 * [Watch Lecture 2](https://itunes.apple.com/us/course/2.-more-xcode-and-swift-mvc/id961180099?i=333886879&mt=2
