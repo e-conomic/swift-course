@@ -10,10 +10,26 @@ import Foundation
 
 class CalculatorBrain {
     
-    private enum Op{
+    private enum Op: Printable {
         case Operand(Double)
         case UnaryOperation(String, Double -> Double)
         case BinaryOperation(String, (Double, Double) -> Double)
+        case MathConstant(String, Double)
+        
+        var description: String {
+            get {
+                switch self {
+                case .Operand(let operand):
+                    return "\(operand)"
+                case .UnaryOperation(let symbol, _):
+                    return symbol
+                case .BinaryOperation(let symbol,_):
+                    return symbol
+                case .MathConstant(let symbol, _):
+                    return symbol
+                }
+            }
+        }
     }
     
     private var opStack = [Op]()
@@ -26,6 +42,9 @@ class CalculatorBrain {
         knownOps["+"] = Op.BinaryOperation("+", +)
         knownOps["-"] = Op.BinaryOperation("-") {$1 - $0}
         knownOps["√"] = Op.UnaryOperation("√", sqrt)
+        knownOps["sin"] = Op.UnaryOperation("sin", sin)
+        knownOps["cos"] = Op.UnaryOperation("cos", cos)
+        knownOps["π"] = Op.MathConstant("π", M_PI)
     }
     
     private func evaluate(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
@@ -48,6 +67,8 @@ class CalculatorBrain {
                         return (operation(operand1, operand2), op2Evaluation.remainingOps)
                     }
                 }
+            case .MathConstant(let constant):
+                return (M_PI, remainingOps)
             }
         }
         return (nil, ops)
@@ -55,10 +76,12 @@ class CalculatorBrain {
     
     func evaluate() -> Double? {
         let (result, remainder) = evaluate(opStack)
+        println("\(opStack) = \(result) with \(remainder) left")
         return result
     }
     
     func pushOperand(operand: Double) -> Double? {
+//        println("\(opStack)")
         opStack.append(Op.Operand(operand))
         return evaluate()
     }
@@ -68,6 +91,15 @@ class CalculatorBrain {
             opStack.append(operation)
         }
         return evaluate()
+    }
+    
+    func getHistory() -> String {
+        var history: String = "\(opStack)"
+        return history
+    }
+    
+    func clearOpstack() {
+        opStack = [Op]()
     }
     
     
