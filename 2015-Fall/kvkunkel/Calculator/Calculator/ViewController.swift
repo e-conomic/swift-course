@@ -13,19 +13,41 @@ class ViewController: UIViewController
     
     @IBOutlet weak var display: UILabel!
     
+    @IBOutlet weak var historyDisplay: UILabel!
+
     var typingNumber: Bool = false
+    var currentFloat: Bool = false
     
     var brain = CalculatorBrain()
     
-    @IBAction func appendDigit(sender: UIButton) {
-        let digit = sender.currentTitle!
+    override func viewDidLoad() {
+        historyDisplay.text = ""
+    }
     
+    @IBAction func appendDigit(sender: UIButton) {
+        println("history: \(brain.getHistory())")
+        let digit = sender.currentTitle!
         
-        if typingNumber {
-            display.text = display.text! + digit
+        if currentFloat == false {
+            if typingNumber {
+                display.text = display.text! + digit
+            } else {
+                display.text = digit
+                typingNumber = true
+            }
         } else {
-            display.text = digit
-            typingNumber = true
+            if digit != "." {
+                if typingNumber  {
+                    display.text = display.text! + digit
+                } else {
+                    display.text = digit
+                    typingNumber = true
+                }
+            }
+        }
+        historyDisplay.text = brain.getHistory()
+        if digit == "." {
+            currentFloat = true
         }
         
         println("digit = \(digit)")
@@ -33,6 +55,7 @@ class ViewController: UIViewController
     }
     
     @IBAction func operate(sender: UIButton) {
+        historyDisplay.text = brain.getHistory()
         if typingNumber {
             enter()
         }
@@ -49,6 +72,7 @@ class ViewController: UIViewController
     var operandStack = Array<Double>()
     
     @IBAction func enter() {
+        historyDisplay.text = brain.getHistory()
         typingNumber = false
         if let result = brain.pushOperand(displayValue) {
             displayValue = result
@@ -64,5 +88,11 @@ class ViewController: UIViewController
         }
     }
 
+    @IBAction func clear() {
+        historyDisplay.text = ""
+        display.text = "0"
+        brain.clearOpstack()
+    }
+    
 }
 
