@@ -1,0 +1,37 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 Assignment 1 notes: \
+\
+Task 1:\
+I started out with Paul Hegarty\'92s Calculator project, as it was at the end of the 3. lecture (i.e. when it had been refactored into a form that conformed with the MVC pattern).\
+I used autolayout, and when I had to fit in new buttons, I just added some \'93invisible\'94 ones to keep it quadratic in shape and thus easy to use auto-layout with\'85\
+\
+Task 2:\
+My focus was not on the most user-friendly solution, but on the shortest code-wise, since Paul H said it could be done in one line, and thus I wanted to do that\'85 I cannot see, how it is possible to do it in less than two lines of code though, so I did it in two. \
+In my eyes, the minimum code you need to add is a conditional of this format:\
+(check if a decimal point has been added already) \{\
+	(add decimalpoint if not already added and user wants it)\
+\}\
+Which fills two lines (unless you remove the \{\} and move it all into one line.. But that would be a bit cheesy, as it is still two statements regardless).\
+If I wanted to make the solution more user-friendly (and thus fill a bit more in the code), I would add a check whether the decimal-point is the very first digit added. In the case that it is, it should add \'930.\'94 to the display instead of just \'93.\'94, as (in my opinion) a decimal of the form \'930.1234\'94 is more readable than \'93.1234\'94. \
+\
+Task 3:\
+Sine and cosine was easy to add, as they are unary operations, and there was aready support for this in the code. \
+Pi was a bit more tricky, since its not even an unary operation (well, you could say it takes a digit and always returns pi, but that would be a cheesy way to add support for it). I decided to extend the code by adding constants to the enum \'93Op\'94 as well, since that seemed the most scalable/extendable way of doing it.\
+\
+Task 4:\
+First I added a label and xcode did the autolayout magic, after adding the relevant constraints.\
+Afterwards, in order to update the label, I saw two possible ways (which conformed to the MVC standard). \
+First option: I could in the viewController monitor every input that the user made in the view, and then record and store it as the history, before sending it to the calculator brain. \
+Second: Since the calculator brain already stores a history of the inputted operations/operands (in its opStack array), I could use that as the history.\
+I went with the second option, and was faced with the issue that I would break the MVC pattern, if I allowed the brain to update the view each time its array changed. Thus I had to update it in another way.\
+The way I did it was by having the brain fire notifications each time opStack changed. My controller would then listen to these notifications, and request the newest opStack history from the brain (and update the view with it), each time there was a change.  \
+\
+Task 5:\
+I added a reset function to the calculator-brain, which empties the current stack of calculations queued for it, and a function in the controller, which resets first the GUI and then calls the function that resets the calculator brain.\
+If the project was larger or different, I would probably have preferred to have a stand-alone function to reset the GUI (without also resetting the brain), since there might have been some need for resetting the GUI but not the brain.\
+}
