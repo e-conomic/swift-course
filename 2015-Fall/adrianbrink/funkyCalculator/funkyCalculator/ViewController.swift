@@ -4,7 +4,7 @@
 //
 //  Created by aevitas on 01/09/15.
 //  Copyright (c) 2015 aevitas. All rights reserved.
-//
+// Last commit before changing to Xcode 7 and Swift 2
 
 
 import UIKit
