@@ -13,6 +13,7 @@
 		6569313B1B9F4A930012C651 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6569313A1B9F4A930012C651 /* Images.xcassets */; };
 		6569313E1B9F4A930012C651 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6569313C1B9F4A930012C651 /* LaunchScreen.xib */; };
 		6569314A1B9F4A930012C651 /* funkyCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656931491B9F4A930012C651 /* funkyCalculatorTests.swift */; };
+		65D12CE51BA43C9600EE42F8 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D12CE41BA43C9600EE42F8 /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		656931431B9F4A930012C651 /* funkyCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = funkyCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		656931481B9F4A930012C651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656931491B9F4A930012C651 /* funkyCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = funkyCalculatorTests.swift; sourceTree = "<group>"; };
+		65D12CE41BA43C9600EE42F8 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +79,8 @@
 		656931301B9F4A930012C651 /* funkyCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				656931331B9F4A930012C651 /* AppDelegate.swift */,
+				656931371B9F4A930012C651 /* Main.storyboard */,
+				65D12CE41BA43C9600EE42F8 /* CalculatorBrain.swift */,
 				656931351B9F4A930012C651 /* ViewController.swift */,
 				656931311B9F4A930012C651 /* Supporting Files */,
 			);
@@ -87,7 +90,7 @@
 		656931311B9F4A930012C651 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				656931371B9F4A930012C651 /* Main.storyboard */,
+				656931331B9F4A930012C651 /* AppDelegate.swift */,
 				6569313A1B9F4A930012C651 /* Images.xcassets */,
 				6569313C1B9F4A930012C651 /* LaunchScreen.xib */,
 				656931321B9F4A930012C651 /* Info.plist */,
@@ -156,6 +159,7 @@
 		656931261B9F4A930012C651 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = aevitas;
 				TargetAttributes = {
@@ -212,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D12CE51BA43C9600EE42F8 /* CalculatorBrain.swift in Sources */,
 				656931361B9F4A930012C651 /* ViewController.swift in Sources */,
 				656931341B9F4A930012C651 /* AppDelegate.swift in Sources */,
 			);

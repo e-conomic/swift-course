@@ -1,25 +1,79 @@
 //
 //  ViewController.swift
-//  funkyCalculator
+//  Calculator
 //
-//  Created by aevitas on 08/09/15.
+//  Created by aevitas on 01/09/15.
 //  Copyright (c) 2015 aevitas. All rights reserved.
-//
+// Last commit before changing to Xcode 7 and Swift 2
+
 
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBOutlet weak var display: UILabel!
+    
+    @IBOutlet weak var history: UILabel!
+    
+    var userIsTyping = false
+    
+    var brain = CalculatorBrain()
+    
+    @IBAction func appendDigit(sender: UIButton) {
+        let digit = sender.currentTitle!
+        if userIsTyping {
+            if  digit == "." && display.text!.rangeOfString(".") != nil {
+               return
+            }
+            else {
+                display.text = display.text! + digit
+            }
+        }
+        else {
+            display.text = digit
+            userIsTyping = true
+        }
+    }
+    
+    @IBAction func operate(sender: UIButton) {
+        
+        if userIsTyping {
+            enter()
+        }
+        
+        if let operation = sender.currentTitle {
+            if let result = brain.performOperation(operation) {
+                displayValue = result
+                history.text = brain.history()
+            } else {
+                displayValue = 0
+            }
+        }
+    }
+    
+    @IBAction func enter() {
+        userIsTyping = false
+        if let result = brain.pushOperand(displayValue) {
+            displayValue = result
+            history.text = brain.history()
+        } else {
+            displayValue = 0
+        }
+    }
+    
+    @IBAction func clear() {
+        displayValue = 0
+        history.text = ""
+        brain.clear()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    var displayValue: Double {
+        get {
+            return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+        }
+        set {
+            display.text = "\(newValue)"
+            userIsTyping = false
+        }
     }
-
-
 }
-
