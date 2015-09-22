@@ -10,6 +10,8 @@ Sune sal@e-conomic.com 61301114 @sualitu
 Søren ssn@e-conomic.com 26551981 @ssnielsen  
 Anders ahk@e-conomic.com 30290060 @AndersHqst   
 
+### Tuesday 22. September
+* [Watch What's new in Swift from home](https://developer.apple.com/videos/wwdc/2015/?id=106)
 
 ### Tuesday 15. September
 * [Watch Lecture 4](https://itunes.apple.com/us/course/4.-more-swift-foundation-frameworks/id961180099?i=334467560&mt=2
