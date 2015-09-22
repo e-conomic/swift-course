@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController1" customModule="PushPopNavigation" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="HNB-y3-SlR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pK7-34-QGR">
+                    <rect key="frame" x="41" y="96" width="41" height="30"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gw0-EH-mEg">
+                            <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-z9-JQb">
+                                    <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
+                                    <state key="normal" title="PUSH"/>
+                                    <connections>
+                                        <action selector="pushClick:" destination="-1" eventType="touchUpInside" id="LK6-Nw-dLB"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pK7-34-QGR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="41" id="dqD-qa-5j0"/>
+                <constraint firstItem="pK7-34-QGR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="96" id="hFb-W0-Gpf"/>
+            </constraints>
+            <point key="canvasLocation" x="28" y="410"/>
+        </view>
+    </objects>
+</document>
