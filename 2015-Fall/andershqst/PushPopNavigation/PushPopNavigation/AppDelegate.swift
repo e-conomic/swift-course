@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        nav.pushViewController(ViewController1(), animated: false)
+        nav.pushViewController(ViewController(), animated: false)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         return true
