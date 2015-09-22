@@ -16,7 +16,7 @@ Anders ahk@e-conomic.com 30290060 @AndersHqst
 * [Watch Lecture 7](https://itunes.apple.com/se/course/7.-multiple-mvcs/id961180099?i=335407802&l=en&mt=2
 )
 * Exercise. Implement SmileyFace as in lecture 6. Maybe with a simpler interface. Important part is that you do delegation with protocols. Feel free to go all in with everything that was showed in lecture 7 as well. Create your PR before next time.
-* [Optional. Watch What's new in Swift from home](https://developer.apple.com/videos/wwdc/2015/?id=106)
+* Optional. [Watch What's new in Swift from home](https://developer.apple.com/videos/wwdc/2015/?id=106)
 
 ### Tuesday 15. September
 * [Watch Lecture 4](https://itunes.apple.com/us/course/4.-more-swift-foundation-frameworks/id961180099?i=334467560&mt=2
