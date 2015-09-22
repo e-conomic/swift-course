@@ -11,7 +11,7 @@ import Foundation
 
 class CalculatorBrian {
     
-    private enum Ops: Printable {
+    private enum Ops: CustomStringConvertible {
         case value(Double)
         case MathConst(String, Double)
         case Variable(String)
@@ -98,8 +98,8 @@ class CalculatorBrian {
     }
     
     private func evalDescription() -> String? {
-        let (result, reminder) = description(opStack)
-        println(result)
+        let (result, _) = description(opStack)
+        print(result)
         return result
     }
     
@@ -115,12 +115,12 @@ class CalculatorBrian {
                 return ("\(symbol)", reminderOps)
             case .Variable(let variable):
                 return ("\(variable)", reminderOps)
-            case .UnaryOperation(let symbol, let operation):
+            case .UnaryOperation(let symbol, _):
                 let evaluatedOp = description(reminderOps)
                 if let res = evaluatedOp.Result {
                     return ("\(symbol)(\(res))", evaluatedOp.ReminderOps)
                 }
-            case .BinaryOperation(let symbol, let operation):
+            case .BinaryOperation(let symbol,_):
                 let leftEvaluation = description(reminderOps)
                 if let leftResult = leftEvaluation.Result {
                     let rightEvaluation = description(leftEvaluation.ReminderOps)
@@ -136,7 +136,7 @@ class CalculatorBrian {
     
     func evaluate() -> Double? {
         let (result, reminder) = evaluate(opStack)
-        println("\(opStack) = \(result) with \(reminder)")
+        print("\(opStack) = \(result) with \(reminder)")
         return result
     }
     

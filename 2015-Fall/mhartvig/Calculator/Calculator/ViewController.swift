@@ -98,7 +98,7 @@ class ViewController: UIViewController {
         isNumberADecimal = false;
     }
     
-    @IBAction func dotPress() {
+    @IBAction func dotPress() {        
         if !isNumberADecimal {
         if (isUserTyping) {
             display.text = display.text! + ",";
