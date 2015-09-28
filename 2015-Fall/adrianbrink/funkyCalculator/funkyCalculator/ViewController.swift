@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func clear() {
+    @IBAction func  Display() {
         displayValue = 0
         history.text = ""
         brain.clear()

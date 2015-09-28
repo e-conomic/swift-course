@@ -113,8 +113,6 @@ class CalculatorBrain {
     
     func history() -> String {
         let historyList = opHistory.map { "\($0)" }
-        let abc = historyList.joinWithSeparator(" ")
-        return abc
-        // println(historyList)
+        return historyList.joinWithSeparator(" ")
     }
 }
