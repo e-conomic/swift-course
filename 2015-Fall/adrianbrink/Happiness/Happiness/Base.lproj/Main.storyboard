@@ -26,6 +26,20 @@
                             </stackView>
                             <view contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="unG-X5-JKg" customClass="FaceView" customModule="Happiness" customModuleProvider="target">
                                 <rect key="frame" x="-1" y="-2" width="601" height="602"/>
+                                <subviews>
+                                    <view contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vmk-aL-zLJ" customClass="FaceView" customModule="Happiness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="601" height="602"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="scale">
@@ -39,6 +53,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="FaceView" destination="Vmk-aL-zLJ" id="x6R-Im-G0j"/>
+                        <outlet property="faceView" destination="Vmk-aL-zLJ" id="2cx-mV-T1J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fob-9c-CDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
