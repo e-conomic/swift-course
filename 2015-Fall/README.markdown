@@ -10,6 +10,12 @@ Sune sal@e-conomic.com 61301114 @sualitu
 Søren ssn@e-conomic.com 26551981 @ssnielsen  
 Anders ahk@e-conomic.com 30290060 @AndersHqst   
 
+### Tuesday 29. September
+* [Watch Lecture 8](https://itunes.apple.com/se/course/8.-view-controller-lifecycle/id961180099?i=335430612&l=en&mt=2
+)
+* [Watch Lecture 9](https://itunes.apple.com/se/course/9.-scroll-view-multithreading/id961180099?i=335845112&l=en&mt=2)
+* Work on [Programming: Project  2](https://itunes.apple.com/se/course/programming-project-2/id961180099?i=334824238&l=en&mt=2) 
+
 ### Tuesday 22. September
 * [Watch Lecture 6](https://itunes.apple.com/se/course/6.-protocols-delegation-gestures/id961180099?i=335339388&l=en&mt=2
 )
