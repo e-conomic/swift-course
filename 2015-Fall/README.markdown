@@ -10,13 +10,19 @@ Sune sal@e-conomic.com 61301114 @sualitu
 Søren ssn@e-conomic.com 26551981 @ssnielsen  
 Anders ahk@e-conomic.com 30290060 @AndersHqst   
 
+### Tuesday 29. September
+* [Watch Lecture 8](https://itunes.apple.com/se/course/8.-view-controller-lifecycle/id961180099?i=335430612&l=en&mt=2
+)
+* [Watch Lecture 9](https://itunes.apple.com/se/course/9.-scroll-view-multithreading/id961180099?i=335845112&l=en&mt=2)
+* Work on [Programming: Project  2](https://itunes.apple.com/se/course/programming-project-2/id961180099?i=334824238&l=en&mt=2) 
+
 ### Tuesday 22. September
 * [Watch Lecture 6](https://itunes.apple.com/se/course/6.-protocols-delegation-gestures/id961180099?i=335339388&l=en&mt=2
 )
 * [Watch Lecture 7](https://itunes.apple.com/se/course/7.-multiple-mvcs/id961180099?i=335407802&l=en&mt=2
 )
 * Exercise. Implement SmileyFace as in lecture 6. Maybe with a simpler interface. Important part is that you do delegation with protocols. Feel free to go all in with everything that was showed in lecture 7 as well. Create your PR before next time.
-* [Optional. Watch What's new in Swift from home](https://developer.apple.com/videos/wwdc/2015/?id=106)
+* Optional. [Watch What's new in Swift from home](https://developer.apple.com/videos/wwdc/2015/?id=106)
 
 ### Tuesday 15. September
 * [Watch Lecture 4](https://itunes.apple.com/us/course/4.-more-swift-foundation-frameworks/id961180099?i=334467560&mt=2
