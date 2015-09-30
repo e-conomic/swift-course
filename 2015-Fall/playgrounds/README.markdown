@@ -6,3 +6,6 @@ Here we can share a set of playgrounds to demo various programming concepts in S
 
 ## HTTP Networking
 [Alamofire](https://github.com/Alamofire/Alamofire) Elegant HTTP networking - GET, POST, PUT, etc
+
+## Autolayout
+[SnapKit](https://github.com/SnapKit/SnapKit) DSL for autolayout in code. [Home](http://snapkit.io/)
