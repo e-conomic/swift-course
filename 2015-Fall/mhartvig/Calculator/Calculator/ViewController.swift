@@ -36,9 +36,9 @@ class ViewController: UIViewController {
             if let v = newValue {
                 display.text = "\(v)"
             } else {
-                display.text = "ERROR"
+                display.text = " "
             }
-            historyLabel.text = brain.history()
+            historyLabel.text = brain.description
         }
     }
     @IBAction func operate(sender: UIButton) {
@@ -52,6 +52,18 @@ class ViewController: UIViewController {
         
     }
    
+    @IBAction func setVariable() {
+        if let value = displayValue {
+            brain.setVariable("M", value: value)
+        }
+        clearDisplay()
+        displayValue = brain.evaluate()
+    }
+    @IBAction func addVariable() {
+        brain.pushOperand("M")
+        clearDisplay()
+        displayValue = brain.evaluate()
+    }
     
     @IBAction func enterPress() {
         isUserTyping = false
@@ -59,10 +71,8 @@ class ViewController: UIViewController {
         if let v = displayValue {
             brain.pushValue(v)
         }
-        displayValue = 0
+        clearDisplay()
     }
-    
-    
     
     @IBAction func numberPress(sender: UIButton) {
         if let label = sender.titleLabel {
@@ -79,12 +89,16 @@ class ViewController: UIViewController {
     
     @IBAction func Clear() {
         brain.clear()
+        clearDisplay()
+    }
+    
+    func clearDisplay() {
         displayValue = 0
         isUserTyping = false
         isNumberADecimal = false;
     }
     
-    @IBAction func dotPress() {
+    @IBAction func dotPress() {        
         if !isNumberADecimal {
         if (isUserTyping) {
             display.text = display.text! + ",";
