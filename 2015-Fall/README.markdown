@@ -10,6 +10,12 @@ Sune sal@e-conomic.com 61301114 @sualitu
 Søren ssn@e-conomic.com 26551981 @ssnielsen  
 Anders ahk@e-conomic.com 30290060 @AndersHqst   
 
+### Tuesday 6. October
+* [Watch Lecture 10](https://itunes.apple.com/dk/course/10.-table-view/id961180099?i=336366712&mt=2)
+* [Watch Lecture 11](https://itunes.apple.com/dk/course/11.-unwind-segues-alerts-timers/id961180099?i=336367291&mt=2)
+* Work on [Programming: Project  4](https://itunes.apple.com/dk/course/programming-project-4/id961180099?i=336559635&mt=2) 
+   * We skip part 3, and jump directly to 4 with the SmashTag app. from today's lecture. The Twitter API code used in lecture can be found [here](https://github.com/e-conomic/swift-course/issues/63) (thanks adrianbrink)
+
 ### Tuesday 29. September
 * [Watch Lecture 8](https://itunes.apple.com/se/course/8.-view-controller-lifecycle/id961180099?i=335430612&l=en&mt=2
 )
