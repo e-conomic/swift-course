@@ -17,6 +17,7 @@
 		5B62D2C91BC417F600DF1D56 /* TwitterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62D2C51BC417F600DF1D56 /* TwitterRequest.swift */; settings = {ASSET_TAGS = (); }; };
 		5B62D2CA1BC417F600DF1D56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62D2C61BC417F600DF1D56 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		5BD493801BC43FEA004A115E /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4937F1BC43FEA004A115E /* TweetTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		5BFFC5641BCAA9680028D510 /* TweetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFC5631BCAA9680028D510 /* TweetTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5B62D2C51BC417F600DF1D56 /* TwitterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterRequest.swift; sourceTree = "<group>"; };
 		5B62D2C61BC417F600DF1D56 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5BD4937F1BC43FEA004A115E /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		5BFFC5631BCAA9680028D510 /* TweetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				5B62D2A91BC4132700DF1D56 /* Info.plist */,
 				5B62D2AF1BC413B500DF1D56 /* TwitterTableViewController.swift */,
 				5BD4937F1BC43FEA004A115E /* TweetTableViewCell.swift */,
+				5BFFC5631BCAA9680028D510 /* TweetTableViewController.swift */,
 			);
 			path = TwitterSmash;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				5B62D2B01BC413B500DF1D56 /* TwitterTableViewController.swift in Sources */,
 				5B62D2C91BC417F600DF1D56 /* TwitterRequest.swift in Sources */,
 				5B62D2CA1BC417F600DF1D56 /* User.swift in Sources */,
+				5BFFC5641BCAA9680028D510 /* TweetTableViewController.swift in Sources */,
 				5B62D29E1BC4132700DF1D56 /* AppDelegate.swift in Sources */,
 				5B62D2C71BC417F600DF1D56 /* MediaItem.swift in Sources */,
 				5B62D2C81BC417F600DF1D56 /* Tweet.swift in Sources */,

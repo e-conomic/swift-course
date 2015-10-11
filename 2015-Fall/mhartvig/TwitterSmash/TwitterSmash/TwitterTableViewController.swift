@@ -75,6 +75,12 @@ class TwitterTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if let vc = segue.destinationViewController as? TweetTableViewController {
+            if let selectedIndex = self.tableView.indexPathForCell(sender as! UITableViewCell) {
+                vc.SelectedTweet = tweets[(selectedIndex.section)][selectedIndex.row]
+            }
+        }
     }
 
 }
