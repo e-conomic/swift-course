@@ -10,7 +10,7 @@ import Foundation
 
 class CalculatorModel {
 
-    private enum Op: Printable{
+    private enum Op: CustomStringConvertible{
         case Operand(Double)
         case UnaryOperator(String, Double -> Double)
         case BinaryOperator(String, (Double, Double) -> Double)
@@ -54,6 +54,15 @@ class CalculatorModel {
         learnOp(Op.Constant("π", M_PI))
     }
     
+    var program: AnyObject {
+        get {
+            return ops.map { $0.description }
+        }
+        set {
+            
+        }
+    }
+    
     func pushNumber(number: Double) {
         ops.append(Op.Operand(number))
     }
@@ -70,7 +79,7 @@ class CalculatorModel {
     
     func evaluate() -> Double? {
         let (result, reminder) = evaluate(ops)
-        println("\(ops) = \(result) with \(reminder)")
+        print("\(ops) = \(result) with \(reminder)")
         return result
     }
     

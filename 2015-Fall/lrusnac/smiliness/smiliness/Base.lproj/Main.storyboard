@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eyz-4Q-IZF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Smiliness View Controller-->
+        <scene sceneID="697-lP-URx">
+            <objects>
+                <viewController id="eyz-4Q-IZF" customClass="SmilinessViewController" customModule="smiliness" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W7Q-Px-ylU"/>
+                        <viewControllerLayoutGuide type="bottom" id="A5Q-Gs-6UY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Hg-Fu-YAN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-PO-QWX" customClass="FaceView" customModule="smiliness" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="0.6035009765712599" blue="0.3586594234563526" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ADQ-PO-QWX" secondAttribute="trailing" id="F6V-lK-Xvd"/>
+                            <constraint firstItem="ADQ-PO-QWX" firstAttribute="top" secondItem="1Hg-Fu-YAN" secondAttribute="top" id="IIj-fO-i9F"/>
+                            <constraint firstItem="ADQ-PO-QWX" firstAttribute="bottom" secondItem="A5Q-Gs-6UY" secondAttribute="top" id="IVP-VW-agh"/>
+                            <constraint firstItem="ADQ-PO-QWX" firstAttribute="leading" secondItem="1Hg-Fu-YAN" secondAttribute="leading" id="V6S-d8-z6C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceView" destination="ADQ-PO-QWX" id="SEN-i3-DLc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7G-dv-lyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="409"/>
+        </scene>
+    </scenes>
+</document>

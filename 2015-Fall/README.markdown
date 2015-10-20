@@ -10,6 +10,18 @@ Sune sal@e-conomic.com 61301114 @sualitu
 Søren ssn@e-conomic.com 26551981 @ssnielsen  
 Anders ahk@e-conomic.com 30290060 @AndersHqst   
 
+### Tuesday 20. October
+* [Watch Lecture 14](https://itunes.apple.com/dk/course/14.-core-location-and-mapkit/id961180099?i=337964965&mt=2)
+* [Watch Lecture 15](https://itunes.apple.com/dk/course/15.-modal-segues/id961180099?i=337965486&mt=2)
+* Lecture 14 and 15 mostly concern the MapKit SDK, but also demonstrate some useful stuff working with view controllers. We have discussed to condense these two lectures for next course.
+* Exercises: Continue work on TwitterSmash and make it out of this world. Or (not XOR) do the DropIt and Bouncer  from lecture 12 and 13.
+* XOR start working on you final project.
+
+### Tuesday 13. October
+* [Watch Lecture 12](https://itunes.apple.com/dk/course/12.-dynamic-animation/id961180099?i=336558962&mt=2)
+* [Watch Lecture 13](https://itunes.apple.com/dk/course/13.-application-lifecycle/id961180099?i=337004671&mt=2)
+* Exercises: Continue work on TwitterSmash and make it out of this world. Or (not XOR) do the DropIt and Bouncer  from lecture 12 and 13.  
+
 ### Tuesday 6. October
 * [Watch Lecture 10](https://itunes.apple.com/dk/course/10.-table-view/id961180099?i=336366712&mt=2)
 * [Watch Lecture 11](https://itunes.apple.com/dk/course/11.-unwind-segues-alerts-timers/id961180099?i=336367291&mt=2)

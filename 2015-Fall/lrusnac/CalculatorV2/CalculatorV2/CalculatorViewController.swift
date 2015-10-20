@@ -38,13 +38,13 @@ class CalculatorViewController: UIViewController {
         // I let the user to backspace only if it is in middle of typing
         if userIsInTheMiddleOfTypingANumber {
             if let displayText = display.text {
-                let newDisplay = dropLast(displayText)
+                let newDisplay = String(displayText.characters.dropLast())
                 if newDisplay.isEmpty {
                     userIsInTheMiddleOfTypingANumber = false
                     pointWasInsertedInThisNumber = false
                     display.text = "0"
                 } else {
-                    if let pointIndex = newDisplay.rangeOfString(".") {
+                    if let _ = newDisplay.rangeOfString(".") {
                     } else {
                         pointWasInsertedInThisNumber = false
                     }
