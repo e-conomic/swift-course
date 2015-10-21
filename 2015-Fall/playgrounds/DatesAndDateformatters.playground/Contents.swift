@@ -24,12 +24,12 @@ df.locale = NSLocale(localeIdentifier: "da")
 df.dateFromString(created_at) // nil
 
 // Set it back a make it work again
-df.locale = NSLocale(localeIdentifier: "en_US")
+df.locale = NSLocale(localeIdentifier: "en_UK")
 df.dateFromString(created_at) // "Oct 21, 2015, 9:36 AM"
 
 
 // But how to Danish? Get a NSDate with the en_US date formatter, and format that to Danish or others.
-// 
+//
 // The following is ok because NSDateFormatter was set to en_US above,
 // the returned NSDate knows nothing about locales or time zones - Greenwich Mean Time (GMT)
 let dateInGMT = df.dateFromString(created_at)
@@ -40,6 +40,7 @@ danishDateFormatter.locale = NSLocale(localeIdentifier: "da")
 // instead of df.dateFormat
 danishDateFormatter.dateStyle = .LongStyle
 danishDateFormatter.timeStyle = .LongStyle
+danishDateFormatter.timeZone = NSTimeZone(name: "GMT+0200")
 
-// Now print the date with Danish localization
+// Now print the date with Danish localization and time zone
 danishDateFormatter.stringFromDate(dateInGMT!) // "21. oktober 2015 kl. 09.36.06 CEST"
