@@ -10,6 +10,13 @@ Sune sal@e-conomic.com 61301114 @sualitu
 Søren ssn@e-conomic.com 26551981 @ssnielsen  
 Anders ahk@e-conomic.com 30290060 @AndersHqst   
 
+### Tuesday 27. October
+* [Watch Lecture 16](https://itunes.apple.com/dk/course/16.-camera-persistence-embed/id961180099?i=338453659&mt=2)
+* [Watch Lecture 17](https://itunes.apple.com/dk/course/17.-internationalization-settings/id961180099?i=338875416&mt=2)
+* Make sure to watch the first part of lecture 16 on using the file system. The rest can easily be read up upon when needed, NSLocalizedString, Settings.bundle, and child view controllers to name to most important.
+* [Start working on your project, with hand of your project description before next time] (https://github.com/e-conomic/swift-course/issues/74)
+
+ 
 ### Tuesday 20. October
 * [Watch Lecture 14](https://itunes.apple.com/dk/course/14.-core-location-and-mapkit/id961180099?i=337964965&mt=2)
 * [Watch Lecture 15](https://itunes.apple.com/dk/course/15.-modal-segues/id961180099?i=337965486&mt=2)
