@@ -7,4 +7,4 @@
 
 #Extensions
 - items in a shopping cart remember at which physical store they were added to the cart
-- direct sending of invoices through e-conomic API
+- direct sending of expenses through e-conomic API
