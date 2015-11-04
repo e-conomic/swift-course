@@ -1,3 +1,10 @@
-Project Description:
+##Project Description
 
-I will develop an app, that allows uers to go through a physical store and scan items. The app will either scan the barcode or a QR code and then query the e-conomic product API and add the item to the shopping cart if it is found for later ordering or invoicing. For example, an office manager might be buying office supplies in Fields, and uses the app to record his purchase in the shopping cart. The shopping cart will offer persistence through and location tagging. If possible an extension could incorporate an API to send invoices directly from the app through the e-conomic API.
+- allows users to search for items by scanning QR or bar codes
+	- queries the e-conomic API to find the specific products
+- allows users to add found items to their shopping cart for later ordering or invoicing
+- data persistence will allow users to close or even restart their phone without losing their stored shopping cart
+
+#Extensions
+- items in a shopping cart remember at which physical store they were added to the cart
+- direct sending of invoices through e-conomic API
