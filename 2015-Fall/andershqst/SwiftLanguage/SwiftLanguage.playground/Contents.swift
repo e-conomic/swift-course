@@ -351,6 +351,35 @@ x == y
 // but
 x !== y
 
+
+// Computed properties, getters and setters
+class ComputedProperties {
+    
+    var computedProperty: String {
+        get {
+            return self.computedProperty + String(random())
+        }
+        set {
+            self.computedProperty = newValue + "adding foo"
+        }
+    }
+}
+
+// Lazy loaded properties
+// Syntactic sugar for how one would normally
+// implement lazy loading
+class LazyProperties {
+    var compileTimeString = "foo"
+    lazy var lazyLoaded:String = {
+        return self.compileTimeString
+    }()
+    var notLazy: String = {
+        // Not lazy, so no self and we cannot uncomment the following line
+        //self.compileTimeString
+        return ""
+    }()
+}
+
 // Observable properties
 // Properties can be observable with didSet and willSet
 // Can be used to 'react' (e.g. update your UI) when a variable changes
@@ -378,3 +407,4 @@ observableExample.latest == nil
 observableExample.current = "second"
 observableExample.current == observableExample.mirrored
 observableExample.latest == "first"
+
