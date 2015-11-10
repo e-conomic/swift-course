@@ -1,8 +1,8 @@
 import Foundation
 
-print("hellp world")
+print("hell0 world")
 
-// Constants string of type String
+// Constant string of type String
 let foo:String = "foo"
 // foo = "" // Not allowed, it's a constant
 
@@ -33,7 +33,7 @@ if let unwrappedOptional = optionalString {
 // Explicit unwrapping
 var str: String = optionalString!
 
-// Array
+// Array - append, filter, flatMap, first, foreach, count, contains, endIndex, dropFirst, dropLast, isEmpty, map, last, maxElement, minElement, popLast, partition, removeAll, removeAtIndex, removeLast, removeFirst, removeRange, reverse, startIndex, startsWith,
 var arr = [1, 2, 3]
 var arr2 = arr + arr
 
@@ -75,7 +75,8 @@ for i in 1...10 {
     var a = pow(Double(i), 2)
 }
 
-for elm in [1,2,3] {}
+for elm in [1,2,3] { /* use elm */}
+for _ in 1...3 {} // _ is a wildcard, no element to use
 
 var b = true
 var dummy = 42
@@ -88,8 +89,7 @@ repeat {
 } while dummy != 42
 
 // Functional
-arr.forEach(
-    { elm in
+arr.forEach({ elm in
         // do stuff on elements
     })
 // Or with syntactic sugar
@@ -187,6 +187,14 @@ indirect enum Tree {
 let tree = Tree.Node(.Leaf(1), .Node(.Leaf(2), .Leaf(3)))
 print(tree.sumTree) // 1 + (2 + 3) = 6
 
+// Tuples in switches
+let tuples = [(1,2), (17,42)][0]
+switch tuples {
+case (1,2): () // match some exact element, (and do nothing)
+case (17, _): () // match 17 in first position, and wildcard _
+case (_, _): () // match all
+}
+
 // Golden path with `guard`
 var opt:String? = "hi, I'm an optional"
 guard let unwrappedOpt = opt else {
@@ -202,6 +210,13 @@ if let theTruthAboutEverything = val where val != 42 {
     exit(0)
 }
 
+// where in switches
+let name = "foo bar"
+switch name {
+case let barNamed where name.hasSuffix("bar"): print("\(barNamed) ends with bar")
+default: ()
+}
+
 for x in arr where x > 2 {
     print(x)
 }
@@ -210,6 +225,11 @@ for x in arr where x > 2 {
 // multiple declarations in one line
 var tup = (17, 42, 300)
 let aa = tup.0, bb = tup.1, cc = tup.2
+
+// named tuples
+var namedTup = (dog: "Fido", age: 12)
+namedTup.dog
+namedTup.age
 
 // Classes and access control
 class MyClass {
