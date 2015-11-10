@@ -2,8 +2,8 @@ import Foundation
 
 print("hell0 world")
 
-// Constant string of type String
-let foo:String = "foo"
+// Constant of type String
+let foo: String = "foo"
 // foo = "" // Not allowed, it's a constant
 
 // Inferred type is String
@@ -14,12 +14,12 @@ var baz = "baz"
 baz = "" // ok
 
 // Optionals
-var optionalString:String?
+var optionalString: String?
 optionalString = "os"
 
 
-// if control flow
-// booleans
+// If control flow
+// Booleans
 if true == false {} else if "baz" == "foo" {} else { print("here") }
 
 // Assertions
@@ -33,7 +33,7 @@ if let unwrappedOptional = optionalString {
 // Explicit unwrapping
 var str: String = optionalString!
 
-// Array - append, filter, flatMap, first, foreach, count, contains, endIndex, dropFirst, dropLast, isEmpty, map, last, maxElement, minElement, popLast, partition, removeAll, removeAtIndex, removeLast, removeFirst, removeRange, reverse, startIndex, startsWith,
+// Array - append, filter, flatMap, first, foreach, count, contains, endIndex, dropFirst, dropLast, isEmpty, map, last, maxElement, minElement, popLast, partition, removeAll, removeAtIndex, removeLast, removeFirst, removeRange, reverse, startIndex, startsWith
 var arr = [1, 2, 3]
 var arr2 = arr + arr
 
@@ -41,7 +41,7 @@ var arr2 = arr + arr
 var d = [String:String]()
 d = Dictionary<String, String>() // same
 d["a"] = "123"
-var nubers = [0: "zero", 1: "one", 2: "two"]
+var numbers = [0: "zero", 1: "one", 2: "two"]
 
 // Sets
 var s:Set<Int> = [1, 2, 3]
@@ -60,10 +60,10 @@ concatBar("bar")
 func appendBar2(externalName internalName:String) -> String {
     return internalName + "bar2"
 }
-// Parameter name is not explicti
+// Parameter name is not explicit
 appendBar2(externalName: "foo")
 
-// Mor arguments
+// More arguments
 func addYears(years:Int, toYear:Int) {
     // Passing arguments to strings
     print("Computed year \(years + toYear)")
@@ -75,7 +75,7 @@ for i in 1...10 {
     var a = pow(Double(i), 2)
 }
 
-for elm in [1,2,3] { /* use elm */}
+for elm in [1,2,3] { /* use elm */ }
 for _ in 1...3 {} // _ is a wildcard, no element to use
 
 var b = true
@@ -83,19 +83,19 @@ var dummy = 42
 while b && dummy == 42 {
     b = false
 }
-// do while
+// Do while
 repeat {
     print(dummy)
 } while dummy != 42
 
 // Functional
 arr.forEach({ elm in
-        // do stuff on elements
-    })
+    // do stuff on elements
+})
 // Or with syntactic sugar
 arr.forEach {
-        print($0)// 1,2,3
-    }
+    print($0) // 1,2,3
+}
 
 // Reduce, equilavant statements
 arr.reduce(0, combine: { res, elm in res + elm} )
@@ -125,8 +125,8 @@ func mySort(@noescape compare: (Int, Int) -> Bool) {
 }
 
 // Autoclosures, expression is automatically converted to a closure
-// Uncommen to implement and implies to @noescape attribute
-// If it should be non escaping use @autoclosure(escaping)
+// Uncommon to implement and implies the @noescape attribute
+// If it should be non-escaping use @autoclosure(escaping)
 var names = ["anders", "benny", "carsten"]
 func printName(@autoclosure closure: () -> String) {
 //    print("hello \(closure())");
@@ -162,8 +162,8 @@ enum Shape {
 }
 let shape:Shape = .Pentagon("p")
 
-// enum with default raw values
-// raw values must be unique at compile time, unlike associated values
+// Enum with default raw values
+// Raw values must be unique at compile time, unlike associated values
 enum MyChar: Character {
     case Tab = "\t"
     case Foo = "f"
@@ -190,27 +190,27 @@ print(tree.sumTree) // 1 + (2 + 3) = 6
 // Tuples in switches
 let tuples = [(1,2), (17,42)][0]
 switch tuples {
-case (1,2): () // match some exact element, (and do nothing)
-case (17, _): () // match 17 in first position, and wildcard _
-case (_, _): () // match all
+case (1,2): () // Match some exact element, (and do nothing)
+case (17, _): () // Match 17 in first position, and wildcard _
+case (_, _): () // Match all
 }
 
 // Golden path with `guard`
-var opt:String? = "hi, I'm an optional"
+var opt: String? = "Hi, I'm an optional"
 guard let unwrappedOpt = opt else {
     print("Could not unwrap opt");
     exit(0)
 }
 print("opt=\(opt)")
 
-// where
-var val:Int? = 42
+// Where keyword
+var val: Int? = 42
 if let theTruthAboutEverything = val where val != 42 {
     print("\(val) is not the truth about everything")
     exit(0)
 }
 
-// where in switches
+// Where in switches
 let name = "foo bar"
 switch name {
 case let barNamed where name.hasSuffix("bar"): print("\(barNamed) ends with bar")
@@ -222,19 +222,19 @@ for x in arr where x > 2 {
 }
 
 // Tuples
-// multiple declarations in one line
+// Multiple declarations in one line
 var tup = (17, 42, 300)
 let aa = tup.0, bb = tup.1, cc = tup.2
 
-// named tuples
+// Named tuples
 var namedTup = (dog: "Fido", age: 12)
-namedTup.dog
-namedTup.age
+namedTup.dog // Returns "Fido"
+namedTup.age // Returns 12
 
 // Classes and access control
 class MyClass {
-    internal class InnerClass {} // internal is default
-    private class PrivateInnerClass {} // private to the SOURCE FILE
+    internal class InnerClass {} // Internal is default
+    private class PrivateInnerClass {} // Private to the SOURCE FILE
 }
 
 class SomeOtherClass {
@@ -272,10 +272,10 @@ class FooImplementer: NSObject, Fooable {
 class DummySubscript {
     var a = "foo", b = "bar"
     subscript(varName: String) -> String {
-    get {
-        if varName == "a" { return a }
-        return b
-    }
+        get {
+            if varName == "a" { return a }
+            return b
+        }
         set(newValue) {
             if varName == "a" {
                 a = newValue
@@ -286,13 +286,13 @@ class DummySubscript {
     }
     // We can declare multiple subscript, with any number of args
     subscript(index: Int, ignoredArg: Array<Int>) -> String {
-    get{
-        if index == 0 {
-            return a
+        get {
+            if index == 0 {
+                return a
+            }
+            return b
         }
-        return b
-        }
-        // readonly
+        // No set => readonly
     }
 }
 var obj = DummySubscript()
@@ -350,3 +350,5 @@ y.value = 42
 x == y
 // but
 x !== y
+
+// 
