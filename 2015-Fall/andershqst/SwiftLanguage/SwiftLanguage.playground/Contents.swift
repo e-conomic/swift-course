@@ -351,4 +351,29 @@ x == y
 // but
 x !== y
 
-// 
+// Observable properties
+// Properties can be observable with didSet and willSet
+// Can be used to 'react' (e.g. update your UI) when a variable changes
+class ObservableExample {
+    var current: String? {
+        didSet {
+            mirrored = current
+        }
+        willSet {
+            latest = current
+        }
+    }
+    
+    private var mirrored: String?
+    private var latest: String?
+}
+
+// Now 'latest' will contain the latest value set to 'current'
+var observableExample = ObservableExample()
+observableExample.current = "first"
+observableExample.current == observableExample.mirrored
+observableExample.latest == nil
+
+observableExample.current = "second"
+observableExample.current == observableExample.mirrored
+observableExample.latest == "first"
