@@ -454,13 +454,3 @@ class ObservableLocalVariableExample {
     }
 }
 ObservableLocalVariableExample().foo()
-
-class Te {
-    class func foo()  {
-        print("wat \(self.bar(Te()))")
-    }
-    func bar() -> String{
-        return "bar"
-    }
-}
-Te.foo()
