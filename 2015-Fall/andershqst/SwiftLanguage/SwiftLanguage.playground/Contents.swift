@@ -364,8 +364,8 @@ class ObservableExample {
         }
     }
     
-    private var mirrored: String?
-    private var latest: String?
+    var mirrored: String?
+    var latest: String?
 }
 
 // Now 'latest' will contain the latest value set to 'current'
