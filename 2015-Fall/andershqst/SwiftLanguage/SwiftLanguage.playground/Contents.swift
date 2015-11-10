@@ -369,6 +369,7 @@ class ObservableExample {
 }
 
 // Now 'latest' will contain the latest value set to 'current'
+// while 'mirrored' will have the same value as 'current'
 var observableExample = ObservableExample()
 observableExample.current = "first"
 observableExample.current == observableExample.mirrored
