@@ -454,3 +454,22 @@ class ObservableLocalVariableExample {
     }
 }
 ObservableLocalVariableExample().foo()
+
+// Type methods (class keyword) and static methods (static keyword)
+// Main difference. Type methods are used in classes and can be overridden.
+class StaticExample {
+    class func foo() {
+        print("Static thing in \(self)")
+    }
+    static func foo2() {
+        print("also possible \(self)")
+    }
+}
+StaticExample.foo();
+StaticExample.foo2();
+struct StaticExample2 {
+    static func foo() {
+        print("Here 'class' could not have been used")
+    }
+}
+StaticExample2.foo()
