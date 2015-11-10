@@ -367,7 +367,8 @@ class ComputedProperties {
 
 // Lazy loaded properties
 // Syntactic sugar for how one would normally
-// implement lazy loading
+// implement lazy loading. 
+// Can only be a var
 class LazyProperties {
     var compileTimeString = "foo"
     lazy var lazyLoaded:String = {
@@ -408,3 +409,16 @@ observableExample.current = "second"
 observableExample.current == observableExample.mirrored
 observableExample.latest == "first"
 
+// The observing and computing of properties
+// can also be done with local variables
+class ObservableLocalVariableExample {
+    func foo() {
+        var localVariable = 0 {
+            didSet {
+                print("local variable didset")
+            }
+        }
+        localVariable = 42
+    }
+}
+ObservableLocalVariableExample().foo()
