@@ -323,6 +323,38 @@ func myNiceFunc(var arr: Array<Int>) {
 myNiceFunc(arrayStruct)
 arrayStruct[0] // still 1
 
+// The mutating keyword
+// Mutate the properties of a struct from within
+// Replace the struct by assigning to self
+struct MutatingStruct {
+    var x = 0
+    mutating func mutateX(x: Int) {
+        self.x = x
+    }
+    mutating func replaceSelf() {
+        self = MutatingStruct(x: 123)
+    }
+}
+// Must be var
+var ms = MutatingStruct()
+ms.mutateX(42)
+ms.replaceSelf()
+ms.x // 123
+
+// Mutating self on enums
+enum MutatingEnum {
+    case One, Two, Three
+    mutating func inc(){
+        switch self {
+        case One: self = Two
+        case Two: self = Three
+        case Three: self = One
+        }
+    }
+}
+var mut = MutatingEnum.One
+mut.inc() // Now mut == MutatingEnum.Two
+
 // Identity operators === and !==
 class Dummy { }
 let dummyObj = Dummy()
