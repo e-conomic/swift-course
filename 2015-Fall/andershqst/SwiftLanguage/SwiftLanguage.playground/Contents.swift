@@ -339,7 +339,7 @@ struct MutatingStruct {
 var ms = MutatingStruct()
 ms.mutateX(42)
 ms.replaceSelf()
-ms.x
+ms.x // 123
 
 // Mutating self on enums
 enum MutatingEnum {
@@ -353,7 +353,7 @@ enum MutatingEnum {
     }
 }
 var mut = MutatingEnum.One
-mut.inc()
+mut.inc() // Now mut == MutatingEnum.Two
 
 // Identity operators === and !==
 class Dummy { }
