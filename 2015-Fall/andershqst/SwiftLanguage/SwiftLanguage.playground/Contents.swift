@@ -2,7 +2,41 @@ import Foundation
 
 print("hell0 world")
 
-// Constant of type String
+// Operators
+var i = 42
+++i
+--i
+-i
++i
+i++
+i--
+2 * 2
+4 / 2
+5 % 2
+1+1
+1-1
+// With assignment
+i *= 2
+i /= 2
+i %= 10
+i += 1
+i -= 1
+// Comparisons
+1 < 2
+1 <= 1
+2 > 1
+1 >= 1
+1 == 1
+1 != 2
+[1,2,3] ~= [1,2,3] // Pattern match
+
+// Boolean operators
+true && true
+true || false
+var res = nil ?? "it was nil"
+true ? "true" : "false"
+
+// Constant foo of type String is assigned "foo"
 let foo: String = "foo"
 // foo = "" // Not allowed, it's a constant
 
@@ -479,92 +513,30 @@ struct StaticExample2 {
 StaticExample2.foo()
 StaticExample2.fooProp
 
-// Operators
-// Many of these have already been introduced and assumed to be weel know
-// We list an overview of most operators below for completeness and
-// warmup to declaring custom operators
-
-// Prefix
-var a = 42;
-++a
---a
--a
-+a
-!true
+// Bitwise Operators
 ~3 // Bitwise not. 1 becomes 0, and 0 becomes 1
-
-// Postfix
-a++
-a--
-
-// Infix exponentiative
-1 << 1
-2 >> 1
-
-// Infix multiplicative
-2 * 2
-4 / 2
-5 % 2
-2 &* UInt64.max // Ignore overflow
-//2.0 &/ 0.001 // Divide overflow (Not working in playground?)
-//&% // Remainder ignore overflow (Not working in playground?)
+1 << 1 // Left shift
+2 >> 1 // Right shift
 1 & 3 // Bitwise AND
-
-// Infix additive
-1+1
-1-1
-1 &+ UInt64.max // Add with overflow
-UInt64(0) &- 1 // Subtract with overflow
 1 | 2 // Bitwise OR
 1 ^ 3 // Bitwise XOR
-
-// Infix range
-0..<3 // [0,1,2] half-open
-0...3 // [0,1,2,3] closed
-
-// Infix comparative
-1 < 2
-1 <= 1
-2 > 1
-1 >= 1
-1 == 1
-1 != 2
-var i = NSObject()
-i === i
-NSObject() !== NSObject()
-[1,2,3] ~= [1,2,3] // Pattern match
-
-// Infix conjunctive
-true && true // Logical AND
-
-// Infix disjunctive
-true || false
-
-// Infix nil coalescing
-nil ?? "it was nil"
-
-// Infix ternary conditional
-true ? "true" : "false"
-
-// Infix assignment
+// With assignment
 var myInt = 42
-myInt *= 2
-myInt /= 2
-myInt %= 10
-myInt += 1
-myInt -= 1
-myInt <<= 1 // Left shift
-myInt >>= 1 // Right shift
-myInt &= 1 // Bitwise AND
-myInt ^= 1 // Bitwise XOR
-myInt |= 1 // Bitwise OR
+myInt <<= 1
+myInt >>= 1
+myInt &= 1
+myInt ^= 1
+myInt |= 1
 var myBool = true
 // myBool &&= true // Logical AND (Not working in playground?)
 // myBool ||= false // Logical OR (Not working in playground?)
 
-// Postfix
-a++
-a--
+// Operators that ignore overflows
+2 &* UInt64.max // Multiplication
+//2.0 &/ 0.001 // Division
+//&% // Remainder
+1 &+ UInt64.max // Addition
+UInt64(0) &- 1 // Subtraction
 
 // Custom operators
 // Declare and infix operator ** to perform exponentiations
