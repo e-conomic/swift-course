@@ -533,8 +533,8 @@ var myBool = true
 
 // Operators that ignore overflows
 2 &* UInt64.max // Multiplication
-//2.0 &/ 0.001 // Division
-//&% // Remainder
+//2.0 &/ 0.001 // Division (Not working in playground?)
+//&% // Remainder (Not working in playground?)
 1 &+ UInt64.max // Addition
 UInt64(0) &- 1 // Subtraction
 
