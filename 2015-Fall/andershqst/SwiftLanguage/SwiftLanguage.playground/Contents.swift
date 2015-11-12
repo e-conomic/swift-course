@@ -478,3 +478,115 @@ struct StaticExample2 {
 }
 StaticExample2.foo()
 StaticExample2.fooProp
+
+// Operators
+// Many of these have already been introduced and assumed to be weel know
+// We list an overview of most operators below for completeness and
+// warmup to declaring custom operators
+
+// Prefix
+var a = 42;
+++a
+--a
+-a
++a
+!true
+~3 // Bitwise not. 1 becomes 0, and 0 becomes 1
+
+// Postfix
+a++
+a--
+
+// Infix exponentiative
+1 << 1
+2 >> 1
+
+// Infix multiplicative
+2 * 2
+4 / 2
+5 % 2
+2 &* UInt64.max // Ignore overflow
+//2.0 &/ 0.001 // Divide overflow (Not working in playground?)
+//&% // Remainder ignore overflow (Not working in playground?)
+1 & 3 // Bitwise AND
+
+// Infix additive
+1+1
+1-1
+1 &+ UInt64.max // Add with overflow
+UInt64(0) &- 1 // Subtract with overflow
+1 | 2 // Bitwise OR
+1 ^ 3 // Bitwise XOR
+
+// Infix range
+0..<3 // [0,1,2] half-open
+0...3 // [0,1,2,3] closed
+
+// Infix comparative
+1 < 2
+1 <= 1
+2 > 1
+1 >= 1
+1 == 1
+1 != 2
+var i = NSObject()
+i === i
+NSObject() !== NSObject()
+[1,2,3] ~= [1,2,3] // Pattern match
+
+// Infix conjunctive
+true && true // Logical AND
+
+// Infix disjunctive
+true || false
+
+// Infix nil coalescing
+nil ?? "it was nil"
+
+// Infix ternary conditional
+true ? "true" : "false"
+
+// Infix assignment
+var myInt = 42
+myInt *= 2
+myInt /= 2
+myInt %= 10
+myInt += 1
+myInt -= 1
+myInt <<= 1 // Left shift
+myInt >>= 1 // Right shift
+myInt &= 1 // Bitwise AND
+myInt ^= 1 // Bitwise XOR
+myInt |= 1 // Bitwise OR
+var myBool = true
+// myBool &&= true // Logical AND (Not working in playground?)
+// myBool ||= false // Logical OR (Not working in playground?)
+
+// Postfix
+a++
+a--
+
+// Custom operators
+// Declare and infix operator ** to perform exponentiations
+// Inside the {} we declare it to be left associative with precedence 160 (like << and >>)
+infix operator ** { associativity left precedence 160 }
+// Implementation
+func ** (left: Double, right: Double) -> Double {
+    return pow(left, right)
+}
+2 ** 6
+
+// Also implement the assignment operator for **
+infix operator **= { associativity right precedence 90 }
+func **= (inout left: Double, right: Double) {
+    left = left ** right
+}
+var aDouble = 2.0;
+aDouble **= 3
+
+// Custom prefix with unicode
+prefix operator √ {}
+prefix func √ (number: Double) -> Double {
+    return sqrt(number)
+}
+√64
