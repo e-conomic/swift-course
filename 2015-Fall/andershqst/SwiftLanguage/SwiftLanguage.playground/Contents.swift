@@ -562,3 +562,42 @@ prefix func √ (number: Double) -> Double {
     return sqrt(number)
 }
 √64
+
+// Exceptions
+enum MyError: ErrorType {
+    case MyError1
+    case MyError2
+}
+
+func throwException() throws -> String {
+    var callOrder = 1
+    // The defer statement does not seem to work in the playground
+    defer {
+        print("Will always be called by the end of a throwing function. callOrder=\(callOrder++)")
+    }
+    defer {
+        print("More defer, called before the above. callOrder=\(callOrder++)")
+    }
+    throw MyError.MyError1
+}
+
+do {
+    try throwException()
+    print("More statements here if no exception")
+} catch MyError.MyError1 {
+    print("Caught \(MyError.MyError1)")
+} catch MyError.MyError2 {
+    print("Caught \(MyError.MyError2)")
+} catch {
+    print("catch all")
+}
+
+// Handling exceptions as optionals
+if let x = try? throwException() {
+    print("No exception thrown, and we do not care about what actual exception is thrown")
+}
+
+// Disabling Error propagatin
+func wontThrow() throws -> String { return "" }
+let iKnowItWillWork = try! wontThrow()
+
