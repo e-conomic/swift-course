@@ -1,1 +1,1 @@
-Scratchpad for my own learning and reference overview of the Swift language
+Playgroudn for learning, and reference overview, of the Swift language
