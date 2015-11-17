@@ -2,7 +2,41 @@ import Foundation
 
 print("hell0 world")
 
-// Constant of type String
+// Operators
+var i = 42
+++i
+--i
+-i
++i
+i++
+i--
+2 * 2
+4 / 2
+5 % 2
+1+1
+1-1
+// With assignment
+i *= 2
+i /= 2
+i %= 10
+i += 1
+i -= 1
+// Comparisons
+1 < 2
+1 <= 1
+2 > 1
+1 >= 1
+1 == 1
+1 != 2
+[1,2,3] ~= [1,2,3] // Pattern match
+
+// Boolean operators
+true && true
+true || false
+var res = nil ?? "it was nil"
+true ? "true" : "false"
+
+// Constant foo of type String is assigned "foo"
 let foo: String = "foo"
 // foo = "" // Not allowed, it's a constant
 
@@ -478,3 +512,53 @@ struct StaticExample2 {
 }
 StaticExample2.foo()
 StaticExample2.fooProp
+
+// Bitwise Operators
+~3 // Bitwise not. 1 becomes 0, and 0 becomes 1
+1 << 1 // Left shift
+2 >> 1 // Right shift
+1 & 3 // Bitwise AND
+1 | 2 // Bitwise OR
+1 ^ 3 // Bitwise XOR
+// With assignment
+var myInt = 42
+myInt <<= 1
+myInt >>= 1
+myInt &= 1
+myInt ^= 1
+myInt |= 1
+var myBool = true
+// myBool &&= true // Logical AND (Not working in playground?)
+// myBool ||= false // Logical OR (Not working in playground?)
+
+// Operators that ignore overflows
+2 &* UInt64.max // Multiplication
+//2.0 &/ 0.001 // Division (Not working in playground?)
+//&% // Remainder (Not working in playground?)
+1 &+ UInt64.max // Addition
+UInt64(0) &- 1 // Subtraction
+
+// Custom operators
+// Declare and infix operator ** to perform exponentiations
+// Inside the {} we declare it to be left associative with precedence 160 (like << and >>)
+infix operator ** { associativity left precedence 160 }
+// Implementation
+func ** (left: Double, right: Double) -> Double {
+    return pow(left, right)
+}
+2 ** 6
+
+// Also implement the assignment operator for **
+infix operator **= { associativity right precedence 90 }
+func **= (inout left: Double, right: Double) {
+    left = left ** right
+}
+var aDouble = 2.0;
+aDouble **= 3
+
+// Custom prefix with unicode
+prefix operator √ {}
+prefix func √ (number: Double) -> Double {
+    return sqrt(number)
+}
+√64
