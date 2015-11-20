@@ -132,6 +132,10 @@ arr.forEach {
 }
 
 // Reduce, equilavant statements
+func combine (result: Int, withElement element: Int) -> Int{
+    return result + element
+}
+arr.reduce(0, combine: combine)
 arr.reduce(0, combine: { res, elm in res + elm} )
 arr.reduce(0) { res, elm in res + elm}
 arr.reduce(0) { $0 + $1}
@@ -221,10 +225,20 @@ indirect enum Tree {
 let tree = Tree.Node(.Leaf(1), .Node(.Leaf(2), .Leaf(3)))
 print(tree.sumTree) // 1 + (2 + 3) = 6
 
+// Tuples
+// Multiple declarations in one line
+var tup = (17, 42, 300)
+let aa = tup.0, bb = tup.1, cc = tup.2
+
+// Named tuples
+var namedTup = (dog: "Fido", age: 12)
+namedTup.dog // Returns "Fido"
+namedTup.age // Returns 12
+
 // Tuples in switches
 let tuples = [(1,2), (17,42)][0]
 switch tuples {
-case (1,2): () // Match some exact element, (and do nothing)
+case (1, 2): () // Match some exact element, (and do nothing)
 case (17, _): () // Match 17 in first position, and wildcard _
 case (_, _): () // Match all
 }
@@ -235,35 +249,25 @@ guard let unwrappedOpt = opt else {
     print("Could not unwrap opt");
     exit(0)
 }
-print("opt=\(opt)")
+print("unwrappedOpt=\(unwrappedOpt)")
 
-// Where keyword
+// The where keyword
 var val: Int? = 42
 if let theTruthAboutEverything = val where val != 42 {
     print("\(val) is not the truth about everything")
     exit(0)
 }
 
-// Where in switches
+for val in 1...10 where [1,2,9].contains(val) && val < 7{
+    print(val)
+}
+
+// Use where in switches
 let name = "foo bar"
 switch name {
 case let barNamed where name.hasSuffix("bar"): print("\(barNamed) ends with bar")
 default: ()
 }
-
-for x in arr where x > 2 {
-    print(x)
-}
-
-// Tuples
-// Multiple declarations in one line
-var tup = (17, 42, 300)
-let aa = tup.0, bb = tup.1, cc = tup.2
-
-// Named tuples
-var namedTup = (dog: "Fido", age: 12)
-namedTup.dog // Returns "Fido"
-namedTup.age // Returns 12
 
 // Classes and access control
 class MyClass {
@@ -340,7 +344,7 @@ obj["b"]
 // But cannot:
 // - inheritance, be type casted, deinitialized, no ARC i.e. no multiple referencing
 // Structs (like enums) are value typed
-// This means they always copiedwhen passed around, 
+// This means they always copied when passed around,
 // e.g. passed to a function or assigned to a varialbe or constant
 // interger, booleans, floats, string, arrays, and dictionaries are structs behind the scenes.
 struct MyStruct {
@@ -351,10 +355,10 @@ let myStruct = MyStruct(foo: "auto generated init")
 
 // Demo value typed arrays, i.e. that they are structs
 var arrayStruct = [1, 2, 3]
-func myNiceFunc(var arr: Array<Int>) {
+func setFirstValueInArrayTo42(var arr: Array<Int>) {
     arr[0] = 42
 }
-myNiceFunc(arrayStruct)
+setFirstValueInArrayTo42(arrayStruct)
 arrayStruct[0] // still 1
 
 // The mutating keyword
@@ -372,6 +376,7 @@ struct MutatingStruct {
 // Must be var
 var ms = MutatingStruct()
 ms.mutateX(42)
+ms.x
 ms.replaceSelf()
 ms.x // 123
 
@@ -409,14 +414,13 @@ class DummyEquals: NSObject {
         return value.hashValue
     }
 }
-var x = DummyEquals()
-var y = DummyEquals()
-x.value = 42
-y.value = 42
-x == y
+var dummy1 = DummyEquals()
+var dummy2 = DummyEquals()
+dummy1.value = 42
+dummy2.value = 42
+dummy1 == dummy2
 // but
-x !== y
-
+dummy1 !== dummy2
 
 // Computed properties, getters and setters
 class ComputedProperties {
@@ -436,16 +440,28 @@ class ComputedProperties {
 // implement lazy loading. 
 // Can only be a var
 class LazyProperties {
-    var compileTimeString = "foo"
-    lazy var lazyLoaded:String = {
-        return self.compileTimeString
-    }()
-    var notLazy: String = {
-        // Not lazy, so no self and we cannot uncomment the following line
-        //self.compileTimeString
-        return ""
+    
+    private var lazyProperty:String?
+    func getLazyProperty() -> String {
+        if lazyProperty == nil {
+            lazyProperty = "lazy"
+        }
+        return lazyProperty!
+    }
+    
+    var callCount = 0
+    // Exactly the same as getLazyProperty, with syntactic sugar
+    lazy var lazyProperty2:String = {
+        self.callCount++
+        return "lazy \(self.callCount)"
     }()
 }
+var lp = LazyProperties()
+lp.lazyProperty2
+lp.callCount
+lp.lazyProperty2
+lp.callCount
+
 
 // Observable properties
 // Properties can be observable with didSet and willSet
