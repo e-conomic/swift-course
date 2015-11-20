@@ -617,3 +617,11 @@ if let x = try? throwException() {
 func wontThrow() throws -> String { return "" }
 let iKnowItWillWork = try! wontThrow()
 
+// The inout keyword.
+func mutateSetFirstValueTo42(inout arr: [Int]) {
+    arr[0] = 42
+}
+var arrToMutate = [1, 2, 3]
+mutateSetFirstValueTo42(&arrToMutate)
+arrToMutate[0] // 42
+
