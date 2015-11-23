@@ -132,7 +132,7 @@ arr.forEach {
 }
 
 // Reduce, equilavant statements
-func combine (result: Int, withElement element: Int) -> Int{
+func combine (result: Int, withElement element: Int) -> Int {
     return result + element
 }
 arr.reduce(0, combine: combine)
