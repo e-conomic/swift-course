@@ -75,7 +75,7 @@ Structs (like enums) are value types. This means they always copied when passed 
 
 Example of build in structs  
 
-* interger
+* integer
 * booleans
 * floats
 * string
@@ -136,7 +136,6 @@ myClass.foo // Is 42
 
 
 /*:
-Enums
 Enums and the switch control flow
 */
 enum Shape {
@@ -190,6 +189,7 @@ print(tree.sumTree) // 1 + (2 + 3) = 6
 
 
 
+
 /*:
 Closures
 */
@@ -200,7 +200,7 @@ addTo42(1)
 
 //: Using closures and functions as arguments (Higher Order Functions)
 var arr = [1, 2, 3]
-func combine (result: Int, withElement element: Int) -> Int {
+func combine(result: Int, withElement element: Int) -> Int {
     return result + element
 }
 arr.reduce(0, combine: combine)
@@ -237,15 +237,16 @@ let aa = tup.0, bb = tup.1, cc = tup.2
 
 //: Named tuples
 var namedTup = (dog: "Fido", age: 12)
-namedTup.dog // Returns "Fido"
-namedTup.age // Returns 12
+namedTup.dog
+namedTup.age
 
 /*: Return tuples from functions.
-note: give exmaple with when you might wants this
+note: example of when you might wants this
 */
 func returnTuples() -> (Int, Shape) {
     return (42, Shape.Triangle)
 }
+let (truth, someShape) = returnTuples()
 switch returnTuples() {
 case (42, .Square): print("nope")
 case (42, .Triangle): print("Hello")
@@ -432,6 +433,10 @@ class DummyEquals: NSObject {
         }
         return false
     }
+    
+    override var description:String {
+        return "dummy \(value)"
+    }
 }
 var dummy1 = DummyEquals()
 var dummy2 = DummyEquals()
@@ -566,7 +571,7 @@ if let x = try? throwException() {
 
 
 /*:
-Extra
+Extras, see the SwiftLanguage playground.
 */
 func mySort(@noescape compare: (Int, Int) -> Bool) {
     var nums = [3,1,2]
