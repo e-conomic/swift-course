@@ -271,7 +271,7 @@ case (_, _): print("catch all")
 
 
 //: The where keyword
-var val: Int? = 42
+var val: Int? = nil
 if let theTruthAboutEverything = val where val != 42 {
     print("\(val) is not the truth about everything")
 }
@@ -392,10 +392,10 @@ class IntTable {
         }
     }
 }
-var table = IntTable()
-table[2,2]
-table[2,2] = 42
-table[2,2]
+var myIntTable = IntTable()
+myIntTable[2,2]
+myIntTable[2,2] = 42
+myIntTable[2,2]
 
 
 
@@ -531,7 +531,8 @@ func throwException() throws -> String {
     defer {
         print("ALWAYS called at the end of the function")
     }
-    throw MyError.MyError1
+    
+    throw MyError.MyError2
 }
 
 do {
