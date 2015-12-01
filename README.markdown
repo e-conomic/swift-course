@@ -51,8 +51,9 @@ oPolo (available all wednesdays except the one on the 9th of September)
 mhartvig   
 nativix
 
-## Interested for spring 2016? (Survey, and not yet planned)
-AndersHqst   
+## Interested for spring 2016? (Survey, and not yet planned)   
+AndersHqst  
+
 ---
 
 ## Studying at ITU?
