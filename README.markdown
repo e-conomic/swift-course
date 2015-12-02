@@ -11,7 +11,7 @@
 <img width="100" height="100" src="http://ordrestyring.dk/wp-content/uploads/2015/05/e-conomic_ny.jpg" alt="e-conomic logo">
 </p>
 
-# Learn Swift for free at e-conomic A/S
+# Learn Swift for free at e-conomic's Code Academy
 
 Interested in learning how to build apps for iOS using Swift?  Look no further. This fall e-conomic will host a weekly class, where you can come and learn together with full time developers, that want to learn as well. We will create a space in e-conomic's development department where you have the time to learn, and where you can get help and feedback, in a nice environment in central Copenhagen.
 
