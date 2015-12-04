@@ -1,4 +1,4 @@
-During spring 2016 we are runining a free __Client side applications__ course at e-conomic. Details and application can be found [here](https://github.com/e-conomic/client-side-application-course)
+Notice: During spring 2016 we are runining a free __Client side applications__ course at e-conomic. Details and application can be found [here](https://github.com/e-conomic/client-side-application-course)
 
 
 <!-- ![Swift logo]() -->
