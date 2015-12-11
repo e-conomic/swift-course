@@ -13,6 +13,9 @@ Anders ahk@e-conomic.com 30290060 @AndersHqst
 ### Monday 14. December
 * Project presentations from 13:00
 
+### November
+* Work on projects
+
 ### Tuesday 27. October
 * [Watch Lecture 16](https://itunes.apple.com/dk/course/16.-camera-persistence-embed/id961180099?i=338453659&mt=2)
 * [Watch Lecture 17](https://itunes.apple.com/dk/course/17.-internationalization-settings/id961180099?i=338875416&mt=2)
